@@ -1,0 +1,304 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Amaze UI Admin index Examples</title>
+    <meta name="description" content="这是一个 index 页面">
+    <meta name="keywords" content="index">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <link rel="icon" type="image/png" href="assets/i/favicon.png">
+    <link rel="apple-touch-icon-precomposed" href="assets/i/app-icon72x72@2x.png">
+    <meta name="apple-mobile-web-app-title" content="Amaze UI" />
+    <link rel="stylesheet" href="assets/css/amazeui.min.css" />
+    <link rel="stylesheet" href="assets/css/admin.css">
+    <link rel="stylesheet" href="assets/css/app.css">
+</head>
+
+<body data-type="generalComponents">
+
+
+    <header class="am-topbar am-topbar-inverse admin-header">
+        <div class="am-topbar-brand">
+            <a href="javascript:;" class="tpl-logo">
+                <img src="assets/img/logo.png" alt="">
+            </a>
+        </div>
+        <div class="am-icon-list tpl-header-nav-hover-ico am-fl am-margin-right">
+
+        </div>
+
+        <button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-success am-show-sm-only" data-am-collapse="{target: '#topbar-collapse'}"><span
+                class="am-sr-only">导航切换</span> <span class="am-icon-bars"></span></button>
+
+        <div class="am-collapse am-topbar-collapse" id="topbar-collapse">
+
+        </div>
+    </header>
+
+    <div id="app" v-cloak class="tpl-page-container tpl-page-header-fixed">
+        <div class="tpl-left-nav tpl-left-nav-hover">
+            <div class="tpl-left-nav-title">
+            </div>
+            <div class="tpl-left-nav-list">
+                <ul class="tpl-left-nav-menu">
+                    <li class="tpl-left-nav-item" v-for="item in menuList">
+                        <!-- 打开状态 a 标签添加 active 即可   -->
+                        <a href="javascript:;" class="nav-link tpl-left-nav-link-list ">
+                            <i class="am-icon-table"></i>
+                            <span>{{item.name}}</span>
+                            <!-- 列表打开状态的i标签添加 tpl-left-nav-more-ico-rotate 图表即90°旋转  -->
+                            <i class="am-icon-angle-right tpl-left-nav-more-ico am-fr am-margin-right"></i>
+                        </a>
+                        <ul class="tpl-left-nav-sub-menu" style="display: block;">
+                            <li>
+                                <a :href="item.url" v-for="item in item.sysMenuSecondList">
+                                    <i class="am-icon-angle-right"></i>
+                                    <span>{{item.name}}</span>
+                                    <i class="pl-left-nav-content-ico am-fr am-margin-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="tpl-content-wrapper">
+            <div class="tpl-portlet-components">
+                <div class="portlet-title">
+                    <div class="caption font-green bold">
+                        <span class="am-icon-code"></span> 订单列表
+                    </div>
+                </div>
+                <div class="tpl-block">
+                    <div class="am-g">
+                        <!-- <div class="am-u-sm-12 am-u-md-6">
+                            <div class="am-btn-toolbar">
+                                <div class="am-btn-group am-btn-group-xs">
+                                    <button type="button" class="am-btn am-btn-default am-btn-success"><span class="am-icon-plus"></span>
+                                        新增</button>
+                                    <button type="button" class="am-btn am-btn-default am-btn-secondary"><span class="am-icon-save"></span>
+                                        保存</button>
+                                    <button type="button" class="am-btn am-btn-default am-btn-warning"><span class="am-icon-archive"></span>
+                                        审核</button>
+                                    <button type="button" class="am-btn am-btn-default am-btn-danger"><span class="am-icon-trash-o"></span>
+                                        删除</button>
+                                </div>
+                            </div>
+                        </div> -->
+                        <!-- <div class="am-u-sm-12 am-u-md-3">
+                            <div class="am-form-group">
+                                <select data-am-selected="{btnSize: 'sm'}">
+                                    <option value="option1">所有类别</option>
+                                    <option value="option2">IT业界</option>
+                                    <option value="option3">数码产品</option>
+                                    <option value="option3">笔记本电脑</option>
+                                    <option value="option3">平板电脑</option>
+                                    <option value="option3">只能手机</option>
+                                    <option value="option3">超极本</option>
+                                </select>
+                            </div>
+                        </div> -->
+                        <div class="am-u-sm-12 am-u-md-3">
+                            <div class="am-input-group am-input-group-sm">
+                                <input v-model="query" type="text" class="am-form-field" placeholder="请输入订单号">
+                                <span class="am-input-group-btn">
+                                    <button v-on:click="getOrderList(limitPage.currentPage)" class="am-btn  am-btn-default am-btn-success tpl-am-btn-success am-icon-search"
+                                        type="button"></button>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="am-g">
+                        <div class="am-u-sm-12">
+                            <div class="am-form">
+                                <table class="am-table am-table-striped am-table-hover table-main">
+                                    <thead>
+                                        <tr>
+                                            <th class="table-check"><input type="checkbox" class="tpl-table-fz-check"></th>
+                                            <th class="table-id">序号</th>
+                                            <th class="table-title">订单号</th>
+                                            <th class="table-type">座位号</th>
+                                            <th class="table-type">总价</th>
+                                            <th class="table-type">支付状态</th>
+                                            <th class="table-type">支付方式</th>
+                                            <th class="table-type">备注</th>
+                                            <th class="table-author am-hide-sm-only">创建时间</th>
+                                            <th class="table-set">操作</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr v-for="item,index in order">
+                                            <td><input type="checkbox"></td>
+                                            <td>{{index + 1}}</td>
+                                            <td><a href="#">{{item.orderNo}}</a></td>
+                                            <td class="caption font-green bold">{{item.seat}}</td>
+                                            <td class="caption font-red bold">{{item.priceTotal}} 元</td>
+                                            <td>{{item.status==0?"未支付":item.status==1?"已支付":"未知"}}</td>
+                                            <td>{{item.costWay}}</td>
+                                            <td>{{item.remarks}}</td>
+                                            <td class="am-hide-sm-only">{{item.createTime}}</td>
+                                            <td>
+                                                <div class="am-btn-toolbar">
+                                                    <div class="am-btn-group am-btn-group-xs">
+                                                        <button v-if="item.status==0" v-on:click="updateOrder(item.id,1)"
+                                                            class="am-btn am-btn-default am-btn-xs am-text-secondary"><span
+                                                                class="am-icon-pencil-square-o"></span>设置成已支付</button>
+                                                        <button v-if="item.status==1" disabled class="am-btn am-btn-default am-btn-xs am-text-secondary am-hide-sm-only"><span
+                                                                class="am-icon-trash-o"></span> 已支付</button>
+                                                        <button v-if="item.status==1" v-on:click="updateOrder(item.id,0)"
+                                                            class="am-btn am-btn-default am-btn-xs am-text-danger"><span
+                                                                class="am-icon-pencil-square-o"></span>设置成未支付</button>
+                                                        <button v-if="item.status==0" disabled class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only"><span
+                                                                class="am-icon-trash-o"></span> 未支付</button>
+                                                        <button class="am-btn am-btn-default am-btn-xs am-text-success am-hide-sm-only"><span
+                                                                class="am-icon-trash-o"></span> 打印票据</button>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="am-cf">
+
+                                    <div class="am-fr">
+                                        <ul class="am-pagination tpl-pagination">
+                                            <li v-on:click="getOrderList(1)"><a href="#">«</a></li>
+                                            <li v-on:click="getOrderList(limitPage.currentPage -2)" v-if="limitPage.currentPage -2 > 0"><a
+                                                    href="#">{{limitPage.currentPage -2}}</a></li>
+                                            <li v-on:click="getOrderList(limitPage.currentPage -1)" v-if="limitPage.currentPage -1 > 0"><a
+                                                    href="#">{{limitPage.currentPage - 1}}</a></li>
+                                            <li v-on:click="getOrderList(limitPage.currentPage)"><a href="#"><span
+                                                        disabled class="am-text-danger">{{limitPage.currentPage}}</span></a></li>
+                                            <li v-on:click="getOrderList(limitPage.currentPage + 1)" v-if="limitPage.lastPage >= limitPage.currentPage +1"><a
+                                                    href="#">{{limitPage.currentPage + 1}}</a></li>
+                                            <li v-on:click="getOrderList(limitPage.currentPage + 2)" v-if="limitPage.lastPage >= limitPage.currentPage +2"><a
+                                                    href="#">{{limitPage.currentPage + 2}}</a></li>
+                                            <li v-on:click="getOrderList(limitPage.lastPage)"><a href="#">»</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <hr>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/amazeui.min.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script src="http://www.jq22.com/jquery/jquery-2.1.1.js"> </script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"> </script>
+    <script src="assets/js/common.js"></script>
+    <script>
+
+        var vue = new Vue({
+            el: '#app',
+            data: {
+                menuList: [],
+                order: [],
+                limitPage: {},
+                query: ''
+            },
+            methods: {
+                updateOrder: function (id, status) {
+                    updateOrder(id, status);
+                },
+                getOrderList: function (currentPage) {
+                    getOrderList(currentPage);
+                }
+            }
+        })
+
+
+        $(document).ready(function () {
+            init();
+        });
+
+        //初始化
+        function init() {
+            getMenuList();
+            getOrderList(1);
+        }
+
+        function updateOrder(id, status) {
+            $.ajax({
+                url: baseUrl + "/order/form/update",
+                type: 'POST',
+                data: {
+                    id: id,
+                    status: status
+                },
+            }).done(function (res) {
+                if (res.code == 200) {
+                    getOrderList(vue.limitPage.currentPage);
+                } else {
+                    alert(res.msg);
+                }
+            }).fail(function (res) {
+
+            });
+        }
+
+        function getOrderList(currentPage) {
+            $.ajax({
+                url: baseUrl + "/order/form/select/all",
+                type: 'GET',
+                data: {
+                    isForUser: false,
+                    currentPage: currentPage,
+                    id: vue.query
+                },
+            }).done(function (res) {
+                console.log(res);
+                if (res.code == 200) {
+
+                    console.log(res.code);
+                    vue.order = res.data.data;
+                    vue.limitPage = res.data.limitPage;
+                } else {
+                    alert(res.msg);
+                }
+            }).fail(function (res) {
+
+            });
+        }
+
+
+        //获得菜单列表
+        function getMenuList() {
+            $.ajax({
+                url: "http://118.24.52.233/sys/menu/first/select/all",
+                type: 'GET',
+                data: {},
+            }).done(function (res) {
+                console.log(res);
+                if (res.code == 200) {
+                    vue.menuList = res.data;
+                } else {
+                    alert(res.msg);
+                }
+            }).fail(function (res) {
+
+            });
+        }
+
+    </script>
+
+
+</body>
+
+</html>

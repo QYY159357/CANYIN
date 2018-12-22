@@ -1,0 +1,264 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Amaze UI Admin index Examples</title>
+    <meta name="description" content="这是一个 index 页面">
+    <meta name="keywords" content="index">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <link rel="icon" type="image/png" href="assets/i/favicon.png">
+    <link rel="apple-touch-icon-precomposed" href="assets/i/app-icon72x72@2x.png">
+    <meta name="apple-mobile-web-app-title" content="Amaze UI" />
+    <link rel="stylesheet" href="assets/css/amazeui.min.css" />
+    <link rel="stylesheet" href="assets/css/admin.css">
+    <link rel="stylesheet" href="assets/css/app.css">
+</head>
+
+<body data-type="generalComponents">
+
+
+    <header class="am-topbar am-topbar-inverse admin-header">
+        <div class="am-topbar-brand">
+            <a href="javascript:;" class="tpl-logo">
+                <img src="assets/img/logo.png" alt="">
+            </a>
+        </div>
+        <div class="am-icon-list tpl-header-nav-hover-ico am-fl am-margin-right">
+
+        </div>
+
+        <button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-success am-show-sm-only" data-am-collapse="{target: '#topbar-collapse'}"><span
+                class="am-sr-only">导航切换</span> <span class="am-icon-bars"></span></button>
+
+        <div class="am-collapse am-topbar-collapse" id="topbar-collapse">
+
+        </div>
+    </header>
+
+    <div id="app" v-cloak class="tpl-page-container tpl-page-header-fixed">
+        <div class="tpl-left-nav tpl-left-nav-hover">
+            <div class="tpl-left-nav-title">
+            </div>
+            <div class="tpl-left-nav-list">
+                <ul class="tpl-left-nav-menu">
+                    <li class="tpl-left-nav-item" v-for="item in menuList">
+                        <!-- 打开状态 a 标签添加 active 即可   -->
+                        <a href="javascript:;" class="nav-link tpl-left-nav-link-list ">
+                            <i class="am-icon-table"></i>
+                            <span>{{item.name}}</span>
+                            <!-- 列表打开状态的i标签添加 tpl-left-nav-more-ico-rotate 图表即90°旋转  -->
+                            <i class="am-icon-angle-right tpl-left-nav-more-ico am-fr am-margin-right"></i>
+                        </a>
+                        <ul class="tpl-left-nav-sub-menu" style="display: block;">
+                            <li>
+                                <a :href="item.url" v-for="item in item.sysMenuSecondList">
+                                    <i class="am-icon-angle-right"></i>
+                                    <span>{{item.name}}</span>
+                                    <i class="pl-left-nav-content-ico am-fr am-margin-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+        <div class="tpl-content-wrapper">
+            <div class="tpl-portlet-components">
+                <div class="portlet-title">
+                    <div class="caption font-green bold">
+                        <span class="am-icon-code"></span> 菜品分类列表
+                    </div>
+                </div>
+                <div class="tpl-block">
+                    <div class="am-g">
+                        <div class="am-u-sm-12 am-u-md-6">
+                            <div class="am-btn-toolbar">
+                                <div class="am-btn-group am-btn-group-xs">
+                                    <button onclick="javascript:window.location.href='addFoodType.html'" type="button" class="am-btn am-btn-default am-btn-success"><span
+                                            class="am-icon-plus"> 新增 </button>
+                                    <!-- <button type="button" class="am-btn am-btn-default am-btn-secondary"><span class="am-icon-save"></span>
+                                        保存</button>
+                                    <button type="button" class="am-btn am-btn-default am-btn-warning"><span class="am-icon-archive"></span>
+                                        审核</button>
+                                    <button type="button" class="am-btn am-btn-default am-btn-danger"><span class="am-icon-trash-o"></span>
+                                        删除</button> -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="am-u-sm-12 am-u-md-3">
+                            <div class="am-form-group">
+                                <select data-am-selected="{btnSize: 'sm'}">
+                                    <option value="option1">所有类别</option>
+                                    <option value="option2">IT业界</option>
+                                    <option value="option3">数码产品</option>
+                                    <option value="option3">笔记本电脑</option>
+                                    <option value="option3">平板电脑</option>
+                                    <option value="option3">只能手机</option>
+                                    <option value="option3">超极本</option>
+                                </select>
+                            </div>
+                        </div> -->
+                        <div class="am-u-sm-12 am-u-md-3">
+                            <div class="am-input-group am-input-group-sm">
+                                <input type="text" class="am-form-field">
+                                <span class="am-input-group-btn">
+                                    <button class="am-btn  am-btn-default am-btn-success tpl-am-btn-success am-icon-search"
+                                        type="button"></button>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="am-g">
+                        <div class="am-u-sm-12">
+                            <div class="am-form">
+                                <table class="am-table am-table-striped am-table-hover table-main">
+                                    <thead>
+                                        <tr>
+                                            <th class="table-check"><input type="checkbox" class="tpl-table-fz-check"></th>
+                                            <th class="table-id">ID</th>
+                                            <th class="table-type">排序</th>
+                                            <th class="table-author am-hide-sm-only">菜品分类名</th>
+                                            <th class="table-type">创建时间</th>
+                                            <th class="table-type">更新时间</th>
+                                            <th class="table-set">操作</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr v-for="item,index in classifyMenuList">
+                                            <td><input type="checkbox"></td>
+                                            <td>{{index + 1}}</td>
+                                            <td>{{item.order}}</td>
+                                            <td>{{item.name}}</td>
+                                            <td>{{item.createTime}}</td>
+                                            <td>{{item.updateTime}}</td>
+                                            <td>
+                                                <div class="am-btn-toolbar">
+                                                    <div class="am-btn-group am-btn-group-xs">
+                                                        <button v-on:click="intentUpdate(item.id)" class="am-btn am-btn-default am-btn-xs am-text-secondary"><span
+                                                                class="am-icon-pencil-square-o"></span> 编辑</button>
+                                                        <button class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only"><span
+                                                                class="am-icon-trash-o"></span> 删除</button>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="am-cf">
+
+                                    <div class="am-fr">
+                                        <ul class="am-pagination tpl-pagination">
+                                            <li v-on:click="getClassifyMenuList(1)"><a href="#">«</a></li>
+                                            <li v-on:click="getClassifyMenuList(limitPage.currentPage -2)" v-if="limitPage.currentPage -2 > 0"><a
+                                                    href="#">{{limitPage.currentPage -2}}</a></li>
+                                            <li v-on:click="getClassifyMenuList(limitPage.currentPage -1)" v-if="limitPage.currentPage -1 > 0"><a
+                                                    href="#">{{limitPage.currentPage - 1}}</a></li>
+                                            <li v-on:click="getClassifyMenuList(limitPage.currentPage)"><a href="#"><span
+                                                        disabled class="am-text-danger">{{limitPage.currentPage}}</span></a></li>
+                                            <li v-on:click="getClassifyMenuList(limitPage.currentPage + 1)" v-if="limitPage.lastPage >= limitPage.currentPage +1"><a
+                                                    href="#">{{limitPage.currentPage + 1}}</a></li>
+                                            <li v-on:click="getClassifyMenuList(limitPage.currentPage + 2)" v-if="limitPage.lastPage >= limitPage.currentPage +2"><a
+                                                    href="#">{{limitPage.currentPage + 2}}</a></li>
+                                            <li v-on:click="getClassifyMenuList(limitPage.lastPage)"><a href="#">»</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <hr>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/amazeui.min.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script src="http://www.jq22.com/jquery/jquery-2.1.1.js"> </script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"> </script>
+    <script src="assets/js/common.js"></script>
+    <script>
+
+        var vue = new Vue({
+            el: '#app',
+            data: {
+                menuList: [],
+                classifyMenuList: [],
+                limitPage: {}
+            },
+            methods: {
+                intentUpdate: function (id) {
+                    window.location.href = "updateFoodType.html?id=" + id;
+                },
+                getClassifyMenuList: function (currentPage) {
+                    getClassifyMenuList(currentPage);
+                }
+            }
+        })
+
+        $(document).ready(function () {
+            init();
+        });
+
+        //初始化
+        function init() {
+            getMenuList();
+            getClassifyMenuList(1);
+        }
+
+        function getClassifyMenuList(currentPage) {
+            $.ajax({
+                url: baseUrl + "/menu/classify/select/all/for/sys",
+                type: 'GET',
+                data: {
+                    currentPage: currentPage
+                },
+            }).done(function (res) {
+                console.log(res);
+                if (res.code == 200) {
+                    vue.classifyMenuList = res.data.data;
+                    vue.limitPage = res.data.limitPage;
+                } else {
+                    alert(res.msg);
+                }
+            }).fail(function (res) {
+
+            });
+        }
+
+        //获得菜单列表
+        function getMenuList() {
+            $.ajax({
+                url: baseUrl + "/sys/menu/first/select/all",
+                type: 'GET',
+                data: {},
+            }).done(function (res) {
+                console.log(res);
+                if (res.code == 200) {
+                    vue.menuList = res.data;
+                } else {
+                    alert(res.msg);
+                }
+            }).fail(function (res) {
+
+            });
+        }
+
+    </script>
+
+</body>
+
+</html>

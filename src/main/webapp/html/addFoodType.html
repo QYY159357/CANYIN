@@ -1,0 +1,192 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Amaze UI Admin index Examples</title>
+    <meta name="description" content="这是一个 index 页面">
+    <meta name="keywords" content="index">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <link rel="icon" type="image/png" href="assets/i/favicon.png">
+    <link rel="apple-touch-icon-precomposed" href="assets/i/app-icon72x72@2x.png">
+    <meta name="apple-mobile-web-app-title" content="Amaze UI" />
+    <link rel="stylesheet" href="assets/css/amazeui.min.css" />
+    <link rel="stylesheet" href="assets/css/admin.css">
+    <link rel="stylesheet" href="assets/css/app.css">
+</head>
+
+<body data-type="generalComponents">
+
+
+    <header class="am-topbar am-topbar-inverse admin-header">
+        <div class="am-topbar-brand">
+            <a href="javascript:;" class="tpl-logo">
+                <img src="assets/img/logo.png" alt="">
+            </a>
+        </div>
+        <div class="am-icon-list tpl-header-nav-hover-ico am-fl am-margin-right">
+
+        </div>
+
+        <button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-success am-show-sm-only" data-am-collapse="{target: '#topbar-collapse'}"><span
+                class="am-sr-only">导航切换</span> <span class="am-icon-bars"></span></button>
+
+        <div class="am-collapse am-topbar-collapse" id="topbar-collapse">
+
+        </div>
+    </header>
+
+    <div id="app" v-cloak class="tpl-page-container tpl-page-header-fixed">
+        <div class="tpl-left-nav tpl-left-nav-hover">
+            <div class="tpl-left-nav-title">
+            </div>
+            <div class="tpl-left-nav-list">
+                <ul class="tpl-left-nav-menu">
+                    <li class="tpl-left-nav-item" v-for="item in menuList">
+                        <!-- 打开状态 a 标签添加 active 即可   -->
+                        <a href="javascript:;" class="nav-link tpl-left-nav-link-list ">
+                            <i class="am-icon-table"></i>
+                            <span>{{item.name}}</span>
+                            <!-- 列表打开状态的i标签添加 tpl-left-nav-more-ico-rotate 图表即90°旋转  -->
+                            <i class="am-icon-angle-right tpl-left-nav-more-ico am-fr am-margin-right"></i>
+                        </a>
+                        <ul class="tpl-left-nav-sub-menu" style="display: block;">
+                            <li>
+                                <a :href="item.url" v-for="item in item.sysMenuSecondList">
+                                    <i class="am-icon-angle-right"></i>
+                                    <span>{{item.name}}</span>
+                                    <i class="pl-left-nav-content-ico am-fr am-margin-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+        <div class="tpl-content-wrapper">
+            <div class="tpl-portlet-components">
+                <div class="portlet-title">
+                    <div class="caption font-green bold">
+                        <span class="am-icon-code"></span> 添加菜品分类
+                    </div>
+                </div>
+                <div class="tpl-block ">
+
+                    <div class="am-g tpl-amazeui-form">
+
+
+                        <div class="am-u-sm-12 am-u-md-9">
+                            <div class="am-form am-form-horizontal">
+                                <div class="am-form-group">
+                                    <label for="user-name" class="am-u-sm-3 am-form-label">菜品分类</label>
+                                    <div class="am-u-sm-9">
+                                        <input v-model="classifyMenu.name" type="text" placeholder="菜品分类">
+                                        <small>输入菜品分类名</small>
+                                    </div>
+                                </div>
+
+                                <div class="am-form-group">
+                                    <label for="user-email" class="am-u-sm-3 am-form-label">排序</label>
+                                    <div class="am-u-sm-9">
+                                        <input v-model="classifyMenu.order" type="number" placeholder="1，2，3...">
+                                        <small>排序，默认按升序排序</small>
+                                    </div>
+                                </div>
+
+                                <div class="am-form-group">
+                                    <div class="am-u-sm-9 am-u-sm-push-3">
+                                        <button v-on:click="submit" type="button" class="am-btn am-btn-primary">添加</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/amazeui.min.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script src="http://www.jq22.com/jquery/jquery-2.1.1.js"> </script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"> </script>
+    <script src="assets/js/common.js"></script>
+	 <script src="assets/js/amazeui.dialog.js"></script>
+    <script>
+
+        var vue = new Vue({
+            el: '#app',
+            data: {
+                menuList: [],
+                classifyMenu: {
+                    name: null,
+                    order: null
+                }
+            },
+            methods: {
+                submit: function (id, status) {
+			
+                    $.ajax({
+                        url: baseUrl + "/menu/classify/create",
+                        type: 'POST',
+                        data: this.classifyMenu,
+                    }).done(function (res) {
+                        console.log(res);
+                     
+						if (res.code == 200) {
+                            alert('添加成功！');
+							window.location.href = "foodTypeList.html";
+                        } else {
+                            alert(res.msg);
+                        }
+                    }).fail(function (res) {
+
+                    });
+                },
+            }
+        })
+
+        $(document).ready(function () {
+            init();
+        });
+
+        //初始化
+        function init() {
+            getMenuList();
+        }
+
+        //获得菜单列表
+        function getMenuList() {
+            $.ajax({
+                url: baseUrl + "/sys/menu/first/select/all",
+                type: 'GET',
+                data: {},
+            }).done(function (res) {
+                console.log(res);
+                if (res.code == 200) {
+                    vue.menuList = res.data;
+                } else {
+                    alert(res.msg);
+                }
+            }).fail(function (res) {
+
+            });
+        }
+
+    </script>
+
+
+</body>
+
+</html>

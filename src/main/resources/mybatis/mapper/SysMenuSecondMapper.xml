@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.demo.mapper.SysMenuSecondMapper">
+
+	<select id="selectAll" resultType="com.example.demo.pojo.vo.SysMenuSecond">
+	
+		SELECT
+			*
+		FROM
+			sys_menu_second
+	
+	</select>
+	
+	<insert id="create">
+	
+	INSERT INTO sys_menu_second (
+		id,
+		create_time,
+		update_time,
+		`name`,
+		url,
+		sys_menu_first_id,
+		`order`
+	)
+	VALUES
+		(
+		#{id},
+		CURRENT_TIMESTAMP (),
+		CURRENT_TIMESTAMP (),
+		#{name},
+		#{url},
+		#{sysMenuFirstId},
+		#{order}
+		)
+	
+	</insert>
+	
+	<update id="update">
+	
+		UPDATE sys_menu_second
+		<set>
+			<if test="name!=null">name = #{name},</if>
+			<if test="url!=null">url = #{url},</if>
+			<if test="sysMenuFirstId!=null">sysMenuFirstId = #{sysMenuFirstId},</if>
+			<if test="order!=null">order = #{order},</if>
+			update_time = CURRENT_TIMESTAMP ()
+		</set>
+		WHERE
+			id = #{id}
+	
+	</update>
+	
+	<delete id="delete">
+	
+		DELETE FROM sys_menu_second WHERE id = #{id}
+		
+	</delete>
+
+</mapper>

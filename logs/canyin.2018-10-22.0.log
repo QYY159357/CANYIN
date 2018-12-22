@@ -1,0 +1,734 @@
+2018-10-22 22:12:05,421 [main] INFO (StartupInfoLogger.java:48)- Starting Application on USER-20170606XK with PID 10708 (C:\Users\Administrator\Desktop\dianc\QiHeiDeHuaZhiGouHuo-spring-2-master\spring-2\target\classes started by Administrator in C:\Users\Administrator\Desktop\dianc\QiHeiDeHuaZhiGouHuo-spring-2-master\spring-2)
+2018-10-22 22:12:05,431 [main] INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
+2018-10-22 22:12:05,654 [main] INFO (AbstractApplicationContext.java:583)- Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7ce3cb8e: startup date [Mon Oct 22 22:12:05 CST 2018]; root of context hierarchy
+2018-10-22 22:12:08,163 [main] INFO (XmlBeanDefinitionReader.java:317)- Loading XML bean definitions from file [C:\Users\Administrator\Desktop\dianc\QiHeiDeHuaZhiGouHuo-spring-2-master\spring-2\target\classes\spring\spring-aop.xml]
+2018-10-22 22:12:08,338 [main] INFO (XmlBeanDefinitionReader.java:317)- Loading XML bean definitions from file [C:\Users\Administrator\Desktop\dianc\QiHeiDeHuaZhiGouHuo-spring-2-master\spring-2\target\classes\spring\spring-mvc.xml]
+2018-10-22 22:12:08,816 [main] INFO (RepositoryConfigurationDelegate.java:165)- Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-10-22 22:12:09,699 [main] INFO (PostProcessorRegistrationDelegate.java:325)- Bean 'commonConfig' of type [com.example.demo.config.bean.CommonConfig$$EnhancerBySpringCGLIB$$e423dd3b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-10-22 22:12:09,784 [main] INFO (PostProcessorRegistrationDelegate.java:325)- Bean 'messageSource' of type [org.springframework.context.support.ReloadableResourceBundleMessageSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-10-22 22:12:09,957 [main] INFO (PostProcessorRegistrationDelegate.java:325)- Bean 'validator' of type [org.springframework.validation.beanvalidation.LocalValidatorFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-10-22 22:12:10,043 [main] INFO (PostProcessorRegistrationDelegate.java:325)- Bean 'org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration' of type [org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration$$EnhancerBySpringCGLIB$$32c8756b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-10-22 22:12:11,780 [main] INFO (TomcatEmbeddedServletContainer.java:89)- Tomcat initialized with port(s): 8080 (http)
+2018-10-22 22:12:11,822 [main] INFO (DirectJDKLog.java:179)- Starting service [Tomcat]
+2018-10-22 22:12:11,827 [main] INFO (DirectJDKLog.java:179)- Starting Servlet Engine: Apache Tomcat/8.5.15
+2018-10-22 22:12:12,105 [localhost-startStop-1] INFO (DirectJDKLog.java:179)- Initializing Spring embedded WebApplicationContext
+2018-10-22 22:12:12,106 [localhost-startStop-1] INFO (EmbeddedWebApplicationContext.java:276)- Root WebApplicationContext: initialization completed in 6452 ms
+2018-10-22 22:12:12,505 [localhost-startStop-1] INFO (ServletRegistrationBean.java:190)- Mapping servlet: 'dispatcherServlet' to [/]
+2018-10-22 22:12:12,509 [localhost-startStop-1] INFO (ServletRegistrationBean.java:190)- Mapping servlet: 'statViewServlet' to [/druid/*]
+2018-10-22 22:12:12,516 [localhost-startStop-1] INFO (AbstractFilterRegistrationBean.java:258)- Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-10-22 22:12:12,518 [localhost-startStop-1] INFO (AbstractFilterRegistrationBean.java:258)- Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-10-22 22:12:12,518 [localhost-startStop-1] INFO (AbstractFilterRegistrationBean.java:258)- Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-10-22 22:12:12,519 [localhost-startStop-1] INFO (AbstractFilterRegistrationBean.java:258)- Mapping filter: 'requestContextFilter' to: [/*]
+2018-10-22 22:12:12,520 [localhost-startStop-1] INFO (AbstractFilterRegistrationBean.java:271)- Mapping filter: 'webStatFilter' to urls: [/*]
+2018-10-22 22:12:12,521 [localhost-startStop-1] INFO (AbstractFilterRegistrationBean.java:258)- Mapping filter: 'webContextFilter' to: [/*]
+2018-10-22 22:12:16,527 [main] INFO (RequestMappingHandlerAdapter.java:534)- Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7ce3cb8e: startup date [Mon Oct 22 22:12:05 CST 2018]; root of context hierarchy
+2018-10-22 22:12:16,721 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/file/upload/a/multipart/file],methods=[POST]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.FileUploadController.aMultipartFile(org.springframework.web.multipart.MultipartFile)
+2018-10-22 22:12:16,739 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/food/update],methods=[POST]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.FoodController.update(java.lang.String,java.lang.String,java.lang.String,java.lang.Double,java.lang.String,java.lang.String,java.lang.Integer,java.lang.Integer,java.lang.String,java.lang.String,java.lang.String)
+2018-10-22 22:12:16,742 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/food/delete/one/by/id],methods=[POST]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.FoodController.delete(java.lang.String)
+2018-10-22 22:12:16,744 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/food/create],methods=[POST]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.FoodController.create(java.lang.String,java.lang.String,java.lang.Double,java.lang.String,java.lang.String,java.lang.Integer,java.lang.Integer,java.lang.String,java.lang.String,java.lang.String)
+2018-10-22 22:12:16,745 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/food/select/all],methods=[GET]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.FoodController.selectAll()
+2018-10-22 22:12:16,747 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/food/select/one/by/id],methods=[GET]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.FoodController.selectOneById(java.lang.String)
+2018-10-22 22:12:16,747 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/food/select/all/for/sys],methods=[GET]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.FoodController.selectAllForSys(java.lang.Integer,java.lang.Integer)
+2018-10-22 22:12:16,768 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/menu/classify/update],methods=[POST]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.MenuClassifyController.update(java.lang.String,java.lang.String,java.lang.Integer)
+2018-10-22 22:12:16,771 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/menu/classify/delete],methods=[POST]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.MenuClassifyController.delete(java.lang.String)
+2018-10-22 22:12:16,774 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/menu/classify/create],methods=[POST]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.MenuClassifyController.create(java.lang.String,java.lang.Integer)
+2018-10-22 22:12:16,777 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/menu/classify/select/all],methods=[GET]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.MenuClassifyController.selectAll()
+2018-10-22 22:12:16,778 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/menu/classify/select/one/by/id],methods=[GET]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.MenuClassifyController.selectOneById(java.lang.String)
+2018-10-22 22:12:16,779 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/menu/classify/select/all/for/sys],methods=[GET]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.MenuClassifyController.selectAllForSys(java.lang.Integer,java.lang.Integer)
+2018-10-22 22:12:16,798 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/order/form/update],methods=[POST]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.OrderFormController.update(java.lang.String,java.lang.Integer)
+2018-10-22 22:12:16,799 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/order/form/create],methods=[POST]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.OrderFormController.create(com.example.demo.pojo.po.OrderFormPo)
+2018-10-22 22:12:16,800 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/order/form/select/all],methods=[GET]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.OrderFormController.selectAll(java.lang.String,java.lang.Boolean,java.lang.String,java.lang.Integer,java.lang.Integer)
+2018-10-22 22:12:16,802 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/order/form/select/one/by/id],methods=[GET]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.OrderFormController.selectOneById(java.lang.String)
+2018-10-22 22:12:16,803 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/order/form/wx/notify],methods=[GET || POST]}" onto public java.lang.Object com.example.demo.controller.OrderFormController.wxNotify()
+2018-10-22 22:12:16,805 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/phone/code/check/for/{business}],methods=[GET]}" onto public java.lang.Object com.example.demo.controller.PhoneCodeController.checkForBusiness(java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+2018-10-22 22:12:16,810 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/phone/code/send/for/{business}],methods=[GET]}" onto public java.lang.Object com.example.demo.controller.PhoneCodeController.sendForBusiness(java.lang.String,java.lang.String,java.lang.String)
+2018-10-22 22:12:16,813 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/sys/menu/first/update],methods=[POST]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.SysMenuFirstController.update(java.lang.String,java.lang.String,java.lang.Integer)
+2018-10-22 22:12:16,816 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/sys/menu/first/delete],methods=[POST]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.SysMenuFirstController.delete(java.lang.String)
+2018-10-22 22:12:16,818 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/sys/menu/first/create],methods=[POST]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.SysMenuFirstController.create(java.lang.String,java.lang.Integer)
+2018-10-22 22:12:16,818 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/sys/menu/first/select/all],methods=[GET]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.SysMenuFirstController.selectAll()
+2018-10-22 22:12:16,821 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/sys/menu/second/update],methods=[POST]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.SysMenuSecondController.update(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.Integer)
+2018-10-22 22:12:16,822 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/sys/menu/second/delete],methods=[POST]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.SysMenuSecondController.delete(java.lang.String)
+2018-10-22 22:12:16,824 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/sys/menu/second/create],methods=[POST]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.SysMenuSecondController.create(java.lang.String,java.lang.String,java.lang.String,java.lang.Integer)
+2018-10-22 22:12:16,826 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/sys/menu/second/select/all],methods=[GET]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.SysMenuSecondController.selectAll()
+2018-10-22 22:12:16,828 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/test],methods=[GET]}" onto public java.lang.Object com.example.demo.controller.TestController.test()
+2018-10-22 22:12:16,829 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/xxx],methods=[GET]}" onto public java.lang.Object com.example.demo.controller.TestController.xxx(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.Object>)
+2018-10-22 22:12:16,830 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/ddd],methods=[GET]}" onto public java.lang.Object com.example.demo.controller.TestController.ddd(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.Object>)
+2018-10-22 22:12:16,842 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/user/update],methods=[POST]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.UserController.update(java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+2018-10-22 22:12:16,844 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/user/select/all],methods=[GET]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.UserController.selectAll(java.lang.Integer,java.lang.Integer)
+2018-10-22 22:12:16,846 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/user/login],methods=[POST]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.UserController.login(java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+2018-10-22 22:12:16,847 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/user/select/user/by/id],methods=[GET]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.UserController.selectUserById(java.lang.String)
+2018-10-22 22:12:16,852 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-10-22 22:12:16,854 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-10-22 22:12:16,902 [main] INFO (AbstractUrlHandlerMapping.java:349)- Root mapping to handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+2018-10-22 22:12:16,948 [main] INFO (AbstractUrlHandlerMapping.java:362)- Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-10-22 22:12:16,953 [main] INFO (AbstractUrlHandlerMapping.java:362)- Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-10-22 22:12:17,011 [main] INFO (ExceptionHandlerExceptionResolver.java:273)- Detected @ExceptionHandler methods in controllerAdviceController
+2018-10-22 22:12:17,071 [main] INFO (AbstractUrlHandlerMapping.java:362)- Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-10-22 22:12:17,128 [main] INFO (WebMvcAutoConfiguration.java:549)- Adding welcome page: class path resource [static/index.html]
+2018-10-22 22:12:18,467 [main] INFO (MBeanExporter.java:431)- Registering beans for JMX exposure on startup
+2018-10-22 22:12:18,472 [main] INFO (MBeanExporter.java:916)- Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-10-22 22:12:18,484 [main] INFO (MBeanExporter.java:916)- Bean with name 'rabbitConnectionFactory' has been autodetected for JMX exposure
+2018-10-22 22:12:18,488 [main] INFO (MBeanExporter.java:671)- Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+2018-10-22 22:12:18,493 [main] INFO (MBeanExporter.java:678)- Located managed bean 'rabbitConnectionFactory': registering with JMX server as MBean [org.springframework.amqp.rabbit.connection:name=rabbitConnectionFactory,type=CachingConnectionFactory]
+2018-10-22 22:12:18,526 [main] INFO (DefaultLifecycleProcessor.java:343)- Starting beans in phase -2147482648
+2018-10-22 22:12:18,526 [main] INFO (DefaultLifecycleProcessor.java:343)- Starting beans in phase 2147483647
+2018-10-22 22:12:18,665 [main] INFO (TomcatEmbeddedServletContainer.java:201)- Tomcat started on port(s): 8080 (http)
+2018-10-22 22:12:18,680 [main] INFO (StartupInfoLogger.java:57)- Started Application in 14.101 seconds (JVM running for 16.28)
+2018-10-22 22:12:18,680 [main] INFO (Application.java:17)- 鍚姩瀹屾瘯...
+2018-10-22 22:14:00,629 [http-nio-8080-exec-1] INFO (DirectJDKLog.java:179)- Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-10-22 22:14:00,632 [http-nio-8080-exec-1] INFO (FrameworkServlet.java:489)- FrameworkServlet 'dispatcherServlet': initialization started
+2018-10-22 22:14:00,756 [http-nio-8080-exec-1] INFO (FrameworkServlet.java:508)- FrameworkServlet 'dispatcherServlet': initialization completed in 122 ms
+2018-10-22 22:14:01,396 [http-nio-8080-exec-1] INFO (DruidDataSource.java:847)- {dataSource-1} inited
+2018-10-22 22:16:03,734 [http-nio-8080-exec-7] INFO (WXPayReport.java:136)- report worker num: 6
+2018-10-22 22:16:03,749 [http-nio-8080-exec-7] INFO (WXPayReport.java:201)- report v1,WXPaySDK/3.0.9,l0HwiNYLpPMF6Pds6izxaAbnx3ApBXfc,1540217763,1026,api.mch.weixin.qq.com,true,6000,8000,0,0,0,63789FEE84DA4BAC31F10A1D4B2F724417C58D4EB88BB0CAC89B5C27FC250012
+2018-10-22 22:16:03,766 [pool-7-thread-1] INFO (WXPayReport.java:145)- get first report msg: v1,WXPaySDK/3.0.9,l0HwiNYLpPMF6Pds6izxaAbnx3ApBXfc,1540217763,1026,api.mch.weixin.qq.com,true,6000,8000,0,0,0,63789FEE84DA4BAC31F10A1D4B2F724417C58D4EB88BB0CAC89B5C27FC250012
+2018-10-22 22:16:03,773 [pool-7-thread-1] INFO (WXPayReport.java:150)- try get remain report msg
+2018-10-22 22:29:51,578 [main] INFO (StartupInfoLogger.java:48)- Starting Application on USER-20170606XK with PID 12192 (C:\Users\Administrator\Desktop\dianc\QiHeiDeHuaZhiGouHuo-spring-2-master\spring-2\target\classes started by Administrator in C:\Users\Administrator\Desktop\dianc\QiHeiDeHuaZhiGouHuo-spring-2-master\spring-2)
+2018-10-22 22:29:51,593 [main] INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
+2018-10-22 22:29:51,897 [main] INFO (AbstractApplicationContext.java:583)- Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7ce3cb8e: startup date [Mon Oct 22 22:29:51 CST 2018]; root of context hierarchy
+2018-10-22 22:29:55,397 [main] INFO (XmlBeanDefinitionReader.java:317)- Loading XML bean definitions from file [C:\Users\Administrator\Desktop\dianc\QiHeiDeHuaZhiGouHuo-spring-2-master\spring-2\target\classes\spring\spring-aop.xml]
+2018-10-22 22:29:55,636 [main] INFO (XmlBeanDefinitionReader.java:317)- Loading XML bean definitions from file [C:\Users\Administrator\Desktop\dianc\QiHeiDeHuaZhiGouHuo-spring-2-master\spring-2\target\classes\spring\spring-mvc.xml]
+2018-10-22 22:29:56,308 [main] INFO (RepositoryConfigurationDelegate.java:165)- Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-10-22 22:29:57,515 [main] INFO (PostProcessorRegistrationDelegate.java:325)- Bean 'commonConfig' of type [com.example.demo.config.bean.CommonConfig$$EnhancerBySpringCGLIB$$d125dccc] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-10-22 22:29:57,600 [main] INFO (PostProcessorRegistrationDelegate.java:325)- Bean 'messageSource' of type [org.springframework.context.support.ReloadableResourceBundleMessageSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-10-22 22:29:57,773 [main] INFO (PostProcessorRegistrationDelegate.java:325)- Bean 'validator' of type [org.springframework.validation.beanvalidation.LocalValidatorFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-10-22 22:29:57,845 [main] INFO (PostProcessorRegistrationDelegate.java:325)- Bean 'org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration' of type [org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration$$EnhancerBySpringCGLIB$$1fca74fc] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-10-22 22:29:59,527 [main] INFO (TomcatEmbeddedServletContainer.java:89)- Tomcat initialized with port(s): 8080 (http)
+2018-10-22 22:29:59,557 [main] INFO (DirectJDKLog.java:179)- Starting service [Tomcat]
+2018-10-22 22:29:59,560 [main] INFO (DirectJDKLog.java:179)- Starting Servlet Engine: Apache Tomcat/8.5.15
+2018-10-22 22:29:59,814 [localhost-startStop-1] INFO (DirectJDKLog.java:179)- Initializing Spring embedded WebApplicationContext
+2018-10-22 22:29:59,815 [localhost-startStop-1] INFO (EmbeddedWebApplicationContext.java:276)- Root WebApplicationContext: initialization completed in 7918 ms
+2018-10-22 22:30:00,233 [localhost-startStop-1] INFO (ServletRegistrationBean.java:190)- Mapping servlet: 'dispatcherServlet' to [/]
+2018-10-22 22:30:00,237 [localhost-startStop-1] INFO (ServletRegistrationBean.java:190)- Mapping servlet: 'statViewServlet' to [/druid/*]
+2018-10-22 22:30:00,244 [localhost-startStop-1] INFO (AbstractFilterRegistrationBean.java:258)- Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-10-22 22:30:00,245 [localhost-startStop-1] INFO (AbstractFilterRegistrationBean.java:258)- Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-10-22 22:30:00,246 [localhost-startStop-1] INFO (AbstractFilterRegistrationBean.java:258)- Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-10-22 22:30:00,247 [localhost-startStop-1] INFO (AbstractFilterRegistrationBean.java:258)- Mapping filter: 'requestContextFilter' to: [/*]
+2018-10-22 22:30:00,247 [localhost-startStop-1] INFO (AbstractFilterRegistrationBean.java:271)- Mapping filter: 'webStatFilter' to urls: [/*]
+2018-10-22 22:30:00,248 [localhost-startStop-1] INFO (AbstractFilterRegistrationBean.java:258)- Mapping filter: 'webContextFilter' to: [/*]
+2018-10-22 22:30:03,863 [main] INFO (RequestMappingHandlerAdapter.java:534)- Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7ce3cb8e: startup date [Mon Oct 22 22:29:51 CST 2018]; root of context hierarchy
+2018-10-22 22:30:04,001 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/file/upload/a/multipart/file],methods=[POST]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.FileUploadController.aMultipartFile(org.springframework.web.multipart.MultipartFile)
+2018-10-22 22:30:04,006 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/food/update],methods=[POST]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.FoodController.update(java.lang.String,java.lang.String,java.lang.String,java.lang.Double,java.lang.String,java.lang.String,java.lang.Integer,java.lang.Integer,java.lang.String,java.lang.String,java.lang.String)
+2018-10-22 22:30:04,007 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/food/delete/one/by/id],methods=[POST]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.FoodController.delete(java.lang.String)
+2018-10-22 22:30:04,008 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/food/create],methods=[POST]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.FoodController.create(java.lang.String,java.lang.String,java.lang.Double,java.lang.String,java.lang.String,java.lang.Integer,java.lang.Integer,java.lang.String,java.lang.String,java.lang.String)
+2018-10-22 22:30:04,009 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/food/select/all],methods=[GET]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.FoodController.selectAll()
+2018-10-22 22:30:04,010 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/food/select/one/by/id],methods=[GET]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.FoodController.selectOneById(java.lang.String)
+2018-10-22 22:30:04,010 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/food/select/all/for/sys],methods=[GET]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.FoodController.selectAllForSys(java.lang.Integer,java.lang.Integer)
+2018-10-22 22:30:04,014 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/menu/classify/update],methods=[POST]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.MenuClassifyController.update(java.lang.String,java.lang.String,java.lang.Integer)
+2018-10-22 22:30:04,016 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/menu/classify/delete],methods=[POST]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.MenuClassifyController.delete(java.lang.String)
+2018-10-22 22:30:04,016 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/menu/classify/create],methods=[POST]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.MenuClassifyController.create(java.lang.String,java.lang.Integer)
+2018-10-22 22:30:04,017 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/menu/classify/select/all],methods=[GET]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.MenuClassifyController.selectAll()
+2018-10-22 22:30:04,018 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/menu/classify/select/one/by/id],methods=[GET]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.MenuClassifyController.selectOneById(java.lang.String)
+2018-10-22 22:30:04,019 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/menu/classify/select/all/for/sys],methods=[GET]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.MenuClassifyController.selectAllForSys(java.lang.Integer,java.lang.Integer)
+2018-10-22 22:30:04,029 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/order/form/update],methods=[POST]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.OrderFormController.update(java.lang.String,java.lang.Integer)
+2018-10-22 22:30:04,031 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/order/form/create],methods=[POST]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.OrderFormController.create(com.example.demo.pojo.po.OrderFormPo)
+2018-10-22 22:30:04,032 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/order/form/select/all],methods=[GET]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.OrderFormController.selectAll(java.lang.String,java.lang.Boolean,java.lang.String,java.lang.Integer,java.lang.Integer)
+2018-10-22 22:30:04,033 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/order/form/select/one/by/id],methods=[GET]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.OrderFormController.selectOneById(java.lang.String)
+2018-10-22 22:30:04,034 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/order/form/wx/notify],methods=[GET || POST]}" onto public java.lang.Object com.example.demo.controller.OrderFormController.wxNotify()
+2018-10-22 22:30:04,036 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/phone/code/check/for/{business}],methods=[GET]}" onto public java.lang.Object com.example.demo.controller.PhoneCodeController.checkForBusiness(java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+2018-10-22 22:30:04,037 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/phone/code/send/for/{business}],methods=[GET]}" onto public java.lang.Object com.example.demo.controller.PhoneCodeController.sendForBusiness(java.lang.String,java.lang.String,java.lang.String)
+2018-10-22 22:30:04,040 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/sys/menu/first/update],methods=[POST]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.SysMenuFirstController.update(java.lang.String,java.lang.String,java.lang.Integer)
+2018-10-22 22:30:04,041 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/sys/menu/first/delete],methods=[POST]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.SysMenuFirstController.delete(java.lang.String)
+2018-10-22 22:30:04,042 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/sys/menu/first/create],methods=[POST]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.SysMenuFirstController.create(java.lang.String,java.lang.Integer)
+2018-10-22 22:30:04,042 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/sys/menu/first/select/all],methods=[GET]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.SysMenuFirstController.selectAll()
+2018-10-22 22:30:04,045 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/sys/menu/second/update],methods=[POST]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.SysMenuSecondController.update(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.Integer)
+2018-10-22 22:30:04,046 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/sys/menu/second/delete],methods=[POST]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.SysMenuSecondController.delete(java.lang.String)
+2018-10-22 22:30:04,046 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/sys/menu/second/create],methods=[POST]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.SysMenuSecondController.create(java.lang.String,java.lang.String,java.lang.String,java.lang.Integer)
+2018-10-22 22:30:04,047 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/sys/menu/second/select/all],methods=[GET]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.SysMenuSecondController.selectAll()
+2018-10-22 22:30:04,048 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/test],methods=[GET]}" onto public java.lang.Object com.example.demo.controller.TestController.test()
+2018-10-22 22:30:04,051 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/xxx],methods=[GET]}" onto public java.lang.Object com.example.demo.controller.TestController.xxx(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.Object>)
+2018-10-22 22:30:04,052 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/ddd],methods=[GET]}" onto public java.lang.Object com.example.demo.controller.TestController.ddd(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.Object>)
+2018-10-22 22:30:04,055 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/user/update],methods=[POST]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.UserController.update(java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+2018-10-22 22:30:04,055 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/user/select/all],methods=[GET]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.UserController.selectAll(java.lang.Integer,java.lang.Integer)
+2018-10-22 22:30:04,056 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/user/login],methods=[POST]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.UserController.login(java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+2018-10-22 22:30:04,057 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/user/select/user/by/id],methods=[GET]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.UserController.selectUserById(java.lang.String)
+2018-10-22 22:30:04,060 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-10-22 22:30:04,061 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-10-22 22:30:04,096 [main] INFO (AbstractUrlHandlerMapping.java:349)- Root mapping to handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+2018-10-22 22:30:04,127 [main] INFO (AbstractUrlHandlerMapping.java:362)- Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-10-22 22:30:04,128 [main] INFO (AbstractUrlHandlerMapping.java:362)- Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-10-22 22:30:04,180 [main] INFO (ExceptionHandlerExceptionResolver.java:273)- Detected @ExceptionHandler methods in controllerAdviceController
+2018-10-22 22:30:04,244 [main] INFO (AbstractUrlHandlerMapping.java:362)- Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-10-22 22:30:04,289 [main] INFO (WebMvcAutoConfiguration.java:549)- Adding welcome page: class path resource [static/index.html]
+2018-10-22 22:30:05,229 [main] INFO (MBeanExporter.java:431)- Registering beans for JMX exposure on startup
+2018-10-22 22:30:05,233 [main] INFO (MBeanExporter.java:916)- Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-10-22 22:30:05,246 [main] INFO (MBeanExporter.java:916)- Bean with name 'rabbitConnectionFactory' has been autodetected for JMX exposure
+2018-10-22 22:30:05,251 [main] INFO (MBeanExporter.java:671)- Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+2018-10-22 22:30:05,255 [main] INFO (MBeanExporter.java:678)- Located managed bean 'rabbitConnectionFactory': registering with JMX server as MBean [org.springframework.amqp.rabbit.connection:name=rabbitConnectionFactory,type=CachingConnectionFactory]
+2018-10-22 22:30:05,297 [main] INFO (DefaultLifecycleProcessor.java:343)- Starting beans in phase -2147482648
+2018-10-22 22:30:05,298 [main] INFO (DefaultLifecycleProcessor.java:343)- Starting beans in phase 2147483647
+2018-10-22 22:30:05,398 [main] INFO (TomcatEmbeddedServletContainer.java:201)- Tomcat started on port(s): 8080 (http)
+2018-10-22 22:30:05,411 [main] INFO (StartupInfoLogger.java:57)- Started Application in 14.689 seconds (JVM running for 16.242)
+2018-10-22 22:30:05,412 [main] INFO (Application.java:17)- 鍚姩瀹屾瘯...
+2018-10-22 22:57:55,691 [main] INFO (StartupInfoLogger.java:48)- Starting Application on USER-20170606XK with PID 3648 (C:\Users\Administrator\Desktop\dianc\QiHeiDeHuaZhiGouHuo-spring-2-master\spring-2\target\classes started by Administrator in C:\Users\Administrator\Desktop\dianc\QiHeiDeHuaZhiGouHuo-spring-2-master\spring-2)
+2018-10-22 22:57:56,372 [main] INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
+2018-10-22 22:57:56,671 [main] INFO (AbstractApplicationContext.java:583)- Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2792200b: startup date [Mon Oct 22 22:57:56 CST 2018]; root of context hierarchy
+2018-10-22 22:58:01,981 [main] INFO (XmlBeanDefinitionReader.java:317)- Loading XML bean definitions from file [C:\Users\Administrator\Desktop\dianc\QiHeiDeHuaZhiGouHuo-spring-2-master\spring-2\target\classes\spring\spring-aop.xml]
+2018-10-22 22:58:02,554 [main] INFO (XmlBeanDefinitionReader.java:317)- Loading XML bean definitions from file [C:\Users\Administrator\Desktop\dianc\QiHeiDeHuaZhiGouHuo-spring-2-master\spring-2\target\classes\spring\spring-mvc.xml]
+2018-10-22 22:58:03,520 [main] INFO (RepositoryConfigurationDelegate.java:165)- Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-10-22 22:58:06,250 [main] INFO (PostProcessorRegistrationDelegate.java:325)- Bean 'commonConfig' of type [com.example.demo.config.bean.CommonConfig$$EnhancerBySpringCGLIB$$b8c94a4] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-10-22 22:58:06,428 [main] INFO (PostProcessorRegistrationDelegate.java:325)- Bean 'messageSource' of type [org.springframework.context.support.ReloadableResourceBundleMessageSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-10-22 22:58:06,740 [main] INFO (PostProcessorRegistrationDelegate.java:325)- Bean 'validator' of type [org.springframework.validation.beanvalidation.LocalValidatorFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-10-22 22:58:06,832 [main] INFO (PostProcessorRegistrationDelegate.java:325)- Bean 'org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration' of type [org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration$$EnhancerBySpringCGLIB$$5a312cd4] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-10-22 22:58:08,833 [main] INFO (TomcatEmbeddedServletContainer.java:89)- Tomcat initialized with port(s): 8080 (http)
+2018-10-22 22:58:08,945 [main] INFO (DirectJDKLog.java:179)- Starting service [Tomcat]
+2018-10-22 22:58:08,957 [main] INFO (DirectJDKLog.java:179)- Starting Servlet Engine: Apache Tomcat/8.5.15
+2018-10-22 22:58:09,557 [localhost-startStop-1] INFO (DirectJDKLog.java:179)- Initializing Spring embedded WebApplicationContext
+2018-10-22 22:58:09,563 [localhost-startStop-1] INFO (EmbeddedWebApplicationContext.java:276)- Root WebApplicationContext: initialization completed in 12893 ms
+2018-10-22 22:58:11,042 [localhost-startStop-1] INFO (ServletRegistrationBean.java:190)- Mapping servlet: 'dispatcherServlet' to [/]
+2018-10-22 22:58:11,053 [localhost-startStop-1] INFO (ServletRegistrationBean.java:190)- Mapping servlet: 'statViewServlet' to [/druid/*]
+2018-10-22 22:58:11,068 [localhost-startStop-1] INFO (AbstractFilterRegistrationBean.java:258)- Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-10-22 22:58:11,075 [localhost-startStop-1] INFO (AbstractFilterRegistrationBean.java:258)- Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-10-22 22:58:11,078 [localhost-startStop-1] INFO (AbstractFilterRegistrationBean.java:258)- Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-10-22 22:58:11,082 [localhost-startStop-1] INFO (AbstractFilterRegistrationBean.java:258)- Mapping filter: 'requestContextFilter' to: [/*]
+2018-10-22 22:58:11,085 [localhost-startStop-1] INFO (AbstractFilterRegistrationBean.java:271)- Mapping filter: 'webStatFilter' to urls: [/*]
+2018-10-22 22:58:11,089 [localhost-startStop-1] INFO (AbstractFilterRegistrationBean.java:258)- Mapping filter: 'webContextFilter' to: [/*]
+2018-10-22 22:58:18,107 [main] INFO (RequestMappingHandlerAdapter.java:534)- Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2792200b: startup date [Mon Oct 22 22:57:56 CST 2018]; root of context hierarchy
+2018-10-22 22:58:18,357 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/file/upload/a/multipart/file],methods=[POST]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.FileUploadController.aMultipartFile(org.springframework.web.multipart.MultipartFile)
+2018-10-22 22:58:18,364 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/food/update],methods=[POST]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.FoodController.update(java.lang.String,java.lang.String,java.lang.String,java.lang.Double,java.lang.String,java.lang.String,java.lang.Integer,java.lang.Integer,java.lang.String,java.lang.String,java.lang.String)
+2018-10-22 22:58:18,366 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/food/delete/one/by/id],methods=[POST]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.FoodController.delete(java.lang.String)
+2018-10-22 22:58:18,369 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/food/create],methods=[POST]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.FoodController.create(java.lang.String,java.lang.String,java.lang.Double,java.lang.String,java.lang.String,java.lang.Integer,java.lang.Integer,java.lang.String,java.lang.String,java.lang.String)
+2018-10-22 22:58:18,372 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/food/select/all],methods=[GET]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.FoodController.selectAll()
+2018-10-22 22:58:18,373 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/food/select/one/by/id],methods=[GET]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.FoodController.selectOneById(java.lang.String)
+2018-10-22 22:58:18,375 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/food/select/all/for/sys],methods=[GET]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.FoodController.selectAllForSys(java.lang.Integer,java.lang.Integer)
+2018-10-22 22:58:18,382 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/menu/classify/update],methods=[POST]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.MenuClassifyController.update(java.lang.String,java.lang.String,java.lang.Integer)
+2018-10-22 22:58:18,385 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/menu/classify/delete],methods=[POST]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.MenuClassifyController.delete(java.lang.String)
+2018-10-22 22:58:18,387 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/menu/classify/create],methods=[POST]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.MenuClassifyController.create(java.lang.String,java.lang.Integer)
+2018-10-22 22:58:18,389 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/menu/classify/select/all],methods=[GET]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.MenuClassifyController.selectAll()
+2018-10-22 22:58:18,391 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/menu/classify/select/one/by/id],methods=[GET]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.MenuClassifyController.selectOneById(java.lang.String)
+2018-10-22 22:58:18,394 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/menu/classify/select/all/for/sys],methods=[GET]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.MenuClassifyController.selectAllForSys(java.lang.Integer,java.lang.Integer)
+2018-10-22 22:58:18,406 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/order/form/update],methods=[POST]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.OrderFormController.update(java.lang.String,java.lang.Integer)
+2018-10-22 22:58:18,408 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/order/form/create],methods=[POST]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.OrderFormController.create(com.example.demo.pojo.po.OrderFormPo)
+2018-10-22 22:58:18,409 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/order/form/select/all],methods=[GET]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.OrderFormController.selectAll(java.lang.String,java.lang.Boolean,java.lang.String,java.lang.Integer,java.lang.Integer)
+2018-10-22 22:58:18,412 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/order/form/select/one/by/id],methods=[GET]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.OrderFormController.selectOneById(java.lang.String)
+2018-10-22 22:58:18,414 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/order/form/wx/notify],methods=[GET || POST]}" onto public java.lang.Object com.example.demo.controller.OrderFormController.wxNotify()
+2018-10-22 22:58:18,418 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/phone/code/check/for/{business}],methods=[GET]}" onto public java.lang.Object com.example.demo.controller.PhoneCodeController.checkForBusiness(java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+2018-10-22 22:58:18,420 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/phone/code/send/for/{business}],methods=[GET]}" onto public java.lang.Object com.example.demo.controller.PhoneCodeController.sendForBusiness(java.lang.String,java.lang.String,java.lang.String)
+2018-10-22 22:58:18,423 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/sys/menu/first/update],methods=[POST]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.SysMenuFirstController.update(java.lang.String,java.lang.String,java.lang.Integer)
+2018-10-22 22:58:18,425 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/sys/menu/first/delete],methods=[POST]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.SysMenuFirstController.delete(java.lang.String)
+2018-10-22 22:58:18,426 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/sys/menu/first/create],methods=[POST]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.SysMenuFirstController.create(java.lang.String,java.lang.Integer)
+2018-10-22 22:58:18,428 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/sys/menu/first/select/all],methods=[GET]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.SysMenuFirstController.selectAll()
+2018-10-22 22:58:18,433 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/sys/menu/second/update],methods=[POST]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.SysMenuSecondController.update(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.Integer)
+2018-10-22 22:58:18,435 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/sys/menu/second/delete],methods=[POST]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.SysMenuSecondController.delete(java.lang.String)
+2018-10-22 22:58:18,437 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/sys/menu/second/create],methods=[POST]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.SysMenuSecondController.create(java.lang.String,java.lang.String,java.lang.String,java.lang.Integer)
+2018-10-22 22:58:18,440 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/sys/menu/second/select/all],methods=[GET]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.SysMenuSecondController.selectAll()
+2018-10-22 22:58:18,442 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/test],methods=[GET]}" onto public java.lang.Object com.example.demo.controller.TestController.test()
+2018-10-22 22:58:18,444 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/xxx],methods=[GET]}" onto public java.lang.Object com.example.demo.controller.TestController.xxx(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.Object>)
+2018-10-22 22:58:18,446 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/ddd],methods=[GET]}" onto public java.lang.Object com.example.demo.controller.TestController.ddd(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.Object>)
+2018-10-22 22:58:18,451 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/user/update],methods=[POST]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.UserController.update(java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+2018-10-22 22:58:18,453 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/user/select/all],methods=[GET]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.UserController.selectAll(java.lang.Integer,java.lang.Integer)
+2018-10-22 22:58:18,455 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/user/login],methods=[POST]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.UserController.login(java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+2018-10-22 22:58:18,456 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/user/select/user/by/id],methods=[GET]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.UserController.selectUserById(java.lang.String)
+2018-10-22 22:58:18,459 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-10-22 22:58:18,462 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-10-22 22:58:18,498 [main] INFO (AbstractUrlHandlerMapping.java:349)- Root mapping to handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+2018-10-22 22:58:18,529 [main] INFO (AbstractUrlHandlerMapping.java:362)- Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-10-22 22:58:18,530 [main] INFO (AbstractUrlHandlerMapping.java:362)- Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-10-22 22:58:18,575 [main] INFO (ExceptionHandlerExceptionResolver.java:273)- Detected @ExceptionHandler methods in controllerAdviceController
+2018-10-22 22:58:18,665 [main] INFO (AbstractUrlHandlerMapping.java:362)- Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-10-22 22:58:18,802 [main] INFO (WebMvcAutoConfiguration.java:549)- Adding welcome page: class path resource [static/index.html]
+2018-10-22 22:58:20,001 [main] INFO (MBeanExporter.java:431)- Registering beans for JMX exposure on startup
+2018-10-22 22:58:20,009 [main] INFO (MBeanExporter.java:916)- Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-10-22 22:58:20,023 [main] INFO (MBeanExporter.java:916)- Bean with name 'rabbitConnectionFactory' has been autodetected for JMX exposure
+2018-10-22 22:58:20,029 [main] INFO (MBeanExporter.java:671)- Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+2018-10-22 22:58:20,038 [main] INFO (MBeanExporter.java:678)- Located managed bean 'rabbitConnectionFactory': registering with JMX server as MBean [org.springframework.amqp.rabbit.connection:name=rabbitConnectionFactory,type=CachingConnectionFactory]
+2018-10-22 22:58:20,084 [main] INFO (DefaultLifecycleProcessor.java:343)- Starting beans in phase -2147482648
+2018-10-22 22:58:20,085 [main] INFO (DefaultLifecycleProcessor.java:343)- Starting beans in phase 2147483647
+2018-10-22 22:58:20,348 [main] INFO (TomcatEmbeddedServletContainer.java:201)- Tomcat started on port(s): 8080 (http)
+2018-10-22 22:58:20,370 [main] INFO (StartupInfoLogger.java:57)- Started Application in 26.704 seconds (JVM running for 132.037)
+2018-10-22 22:58:20,371 [main] INFO (Application.java:17)- 启动完毕...
+2018-10-22 22:59:34,555 [http-nio-8080-exec-1] INFO (DirectJDKLog.java:179)- Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-10-22 22:59:34,558 [http-nio-8080-exec-1] INFO (FrameworkServlet.java:489)- FrameworkServlet 'dispatcherServlet': initialization started
+2018-10-22 22:59:34,659 [http-nio-8080-exec-1] INFO (FrameworkServlet.java:508)- FrameworkServlet 'dispatcherServlet': initialization completed in 98 ms
+2018-10-22 22:59:36,754 [http-nio-8080-exec-1] INFO (WXPayReport.java:136)- report worker num: 6
+2018-10-22 22:59:36,770 [http-nio-8080-exec-1] INFO (WXPayReport.java:201)- report v1,WXPaySDK/3.0.9,1Oc1mQzzAOrFHSZ6Mzo9rkMRK87j0Ivi,1540220376,1232,api.mch.weixin.qq.com,true,6000,8000,0,0,0,DEC40400E3A0BCB18D2C63F6BD89006A8CAF75821EC8A7CD1305C4305B7948CE
+2018-10-22 22:59:36,775 [pool-115-thread-1] INFO (WXPayReport.java:145)- get first report msg: v1,WXPaySDK/3.0.9,1Oc1mQzzAOrFHSZ6Mzo9rkMRK87j0Ivi,1540220376,1232,api.mch.weixin.qq.com,true,6000,8000,0,0,0,DEC40400E3A0BCB18D2C63F6BD89006A8CAF75821EC8A7CD1305C4305B7948CE
+2018-10-22 22:59:36,778 [pool-115-thread-1] INFO (WXPayReport.java:150)- try get remain report msg
+2018-10-22 23:03:04,144 [main] INFO (AbstractTestContextBootstrapper.java:319)- Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.example.demo.ApplicationTests], using SpringBootContextLoader
+2018-10-22 23:03:04,187 [main] INFO (AbstractContextLoader.java:264)- Could not detect default resource locations for test class [com.example.demo.ApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2018-10-22 23:03:04,194 [main] INFO (AnnotationConfigContextLoaderUtils.java:81)- Could not detect default configuration classes for test class [com.example.demo.ApplicationTests]: ApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2018-10-22 23:03:04,819 [main] INFO (SpringBootTestContextBootstrapper.java:206)- Found @SpringBootConfiguration com.example.demo.Application for test class com.example.demo.ApplicationTests
+2018-10-22 23:03:04,876 [main] INFO (AbstractTestContextBootstrapper.java:260)- Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2018-10-22 23:03:05,040 [main] INFO (AbstractTestContextBootstrapper.java:187)- Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@123ef382, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@dbf57b3, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@384ad17b, org.springframework.test.context.support.DirtiesContextTestExecutionListener@61862a7f, org.springframework.test.context.transaction.TransactionalTestExecutionListener@441772e, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@7334aada, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@1d9b7cce, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@4d9e68d0, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@42e99e4a, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@14dd9eb7, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@52e6fdee, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@6c80d78a]
+2018-10-22 23:03:05,072 [main] INFO (AbstractTestContextBootstrapper.java:319)- Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.example.demo.ApplicationTests], using SpringBootContextLoader
+2018-10-22 23:03:05,082 [main] INFO (AbstractContextLoader.java:264)- Could not detect default resource locations for test class [com.example.demo.ApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2018-10-22 23:03:05,086 [main] INFO (AnnotationConfigContextLoaderUtils.java:81)- Could not detect default configuration classes for test class [com.example.demo.ApplicationTests]: ApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2018-10-22 23:03:05,116 [main] INFO (SpringBootTestContextBootstrapper.java:206)- Found @SpringBootConfiguration com.example.demo.Application for test class com.example.demo.ApplicationTests
+2018-10-22 23:03:05,147 [main] INFO (AbstractTestContextBootstrapper.java:260)- Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2018-10-22 23:03:05,174 [main] INFO (AbstractTestContextBootstrapper.java:187)- Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@49e53c76, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@351d00c0, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@2a3b5b47, org.springframework.test.context.support.DirtiesContextTestExecutionListener@55b699ef, org.springframework.test.context.transaction.TransactionalTestExecutionListener@35d019a3, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@689604d9, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@18078bef, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@799f10e1, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@4c371370, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@145f66e3, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@3023df74, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@313ac989]
+2018-10-22 23:03:06,597 [main] WARN (DuplicateJsonObjectContextCustomizerFactory.java:85)- 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/C:/Users/Administrator/.m2/repository/org/json/json/20140107/json-20140107.jar!/org/json/JSONObject.class
+	jar:file:/C:/Users/Administrator/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behaviour
+
+2018-10-22 23:03:06,656 [main] INFO (StartupInfoLogger.java:48)- Starting ApplicationTests on USER-20170606XK with PID 5252 (started by Administrator in C:\Users\Administrator\Desktop\dianc\QiHeiDeHuaZhiGouHuo-spring-2-master\spring-2)
+2018-10-22 23:03:06,659 [main] INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
+2018-10-22 23:03:06,837 [main] INFO (AbstractApplicationContext.java:583)- Refreshing org.springframework.web.context.support.GenericWebApplicationContext@4a8355dd: startup date [Mon Oct 22 23:03:06 CST 2018]; root of context hierarchy
+2018-10-22 23:03:09,884 [main] INFO (XmlBeanDefinitionReader.java:317)- Loading XML bean definitions from file [C:\Users\Administrator\Desktop\dianc\QiHeiDeHuaZhiGouHuo-spring-2-master\spring-2\target\classes\spring\spring-aop.xml]
+2018-10-22 23:03:10,087 [main] INFO (XmlBeanDefinitionReader.java:317)- Loading XML bean definitions from file [C:\Users\Administrator\Desktop\dianc\QiHeiDeHuaZhiGouHuo-spring-2-master\spring-2\target\classes\spring\spring-mvc.xml]
+2018-10-22 23:03:10,660 [main] INFO (RepositoryConfigurationDelegate.java:165)- Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-10-22 23:03:11,879 [main] INFO (PostProcessorRegistrationDelegate.java:325)- Bean 'commonConfig' of type [com.example.demo.config.bean.CommonConfig$$EnhancerBySpringCGLIB$$32ad2fc7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-10-22 23:03:11,935 [main] INFO (PostProcessorRegistrationDelegate.java:325)- Bean 'messageSource' of type [org.springframework.context.support.ReloadableResourceBundleMessageSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-10-22 23:03:12,085 [main] INFO (PostProcessorRegistrationDelegate.java:325)- Bean 'validator' of type [org.springframework.validation.beanvalidation.LocalValidatorFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-10-22 23:03:12,126 [main] INFO (PostProcessorRegistrationDelegate.java:325)- Bean 'org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration' of type [org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration$$EnhancerBySpringCGLIB$$8151c7f7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-10-22 23:03:17,134 [main] INFO (RequestMappingHandlerAdapter.java:534)- Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@4a8355dd: startup date [Mon Oct 22 23:03:06 CST 2018]; root of context hierarchy
+2018-10-22 23:03:17,304 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/file/upload/a/multipart/file],methods=[POST]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.FileUploadController.aMultipartFile(org.springframework.web.multipart.MultipartFile)
+2018-10-22 23:03:17,314 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/food/update],methods=[POST]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.FoodController.update(java.lang.String,java.lang.String,java.lang.String,java.lang.Double,java.lang.String,java.lang.String,java.lang.Integer,java.lang.Integer,java.lang.String,java.lang.String,java.lang.String)
+2018-10-22 23:03:17,316 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/food/delete/one/by/id],methods=[POST]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.FoodController.delete(java.lang.String)
+2018-10-22 23:03:17,319 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/food/create],methods=[POST]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.FoodController.create(java.lang.String,java.lang.String,java.lang.Double,java.lang.String,java.lang.String,java.lang.Integer,java.lang.Integer,java.lang.String,java.lang.String,java.lang.String)
+2018-10-22 23:03:17,321 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/food/select/all],methods=[GET]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.FoodController.selectAll()
+2018-10-22 23:03:17,324 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/food/select/one/by/id],methods=[GET]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.FoodController.selectOneById(java.lang.String)
+2018-10-22 23:03:17,327 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/food/select/all/for/sys],methods=[GET]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.FoodController.selectAllForSys(java.lang.Integer,java.lang.Integer)
+2018-10-22 23:03:17,336 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/menu/classify/update],methods=[POST]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.MenuClassifyController.update(java.lang.String,java.lang.String,java.lang.Integer)
+2018-10-22 23:03:17,338 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/menu/classify/delete],methods=[POST]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.MenuClassifyController.delete(java.lang.String)
+2018-10-22 23:03:17,340 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/menu/classify/create],methods=[POST]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.MenuClassifyController.create(java.lang.String,java.lang.Integer)
+2018-10-22 23:03:17,342 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/menu/classify/select/all],methods=[GET]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.MenuClassifyController.selectAll()
+2018-10-22 23:03:17,343 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/menu/classify/select/one/by/id],methods=[GET]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.MenuClassifyController.selectOneById(java.lang.String)
+2018-10-22 23:03:17,347 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/menu/classify/select/all/for/sys],methods=[GET]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.MenuClassifyController.selectAllForSys(java.lang.Integer,java.lang.Integer)
+2018-10-22 23:03:17,361 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/order/form/update],methods=[POST]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.OrderFormController.update(java.lang.String,java.lang.Integer)
+2018-10-22 23:03:17,363 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/order/form/create],methods=[POST]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.OrderFormController.create(com.example.demo.pojo.po.OrderFormPo)
+2018-10-22 23:03:17,364 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/order/form/select/all],methods=[GET]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.OrderFormController.selectAll(java.lang.String,java.lang.Boolean,java.lang.String,java.lang.Integer,java.lang.Integer)
+2018-10-22 23:03:17,367 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/order/form/select/one/by/id],methods=[GET]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.OrderFormController.selectOneById(java.lang.String)
+2018-10-22 23:03:17,370 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/order/form/wx/notify],methods=[GET || POST]}" onto public java.lang.Object com.example.demo.controller.OrderFormController.wxNotify()
+2018-10-22 23:03:17,372 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/phone/code/check/for/{business}],methods=[GET]}" onto public java.lang.Object com.example.demo.controller.PhoneCodeController.checkForBusiness(java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+2018-10-22 23:03:17,374 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/phone/code/send/for/{business}],methods=[GET]}" onto public java.lang.Object com.example.demo.controller.PhoneCodeController.sendForBusiness(java.lang.String,java.lang.String,java.lang.String)
+2018-10-22 23:03:17,379 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/sys/menu/first/update],methods=[POST]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.SysMenuFirstController.update(java.lang.String,java.lang.String,java.lang.Integer)
+2018-10-22 23:03:17,381 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/sys/menu/first/delete],methods=[POST]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.SysMenuFirstController.delete(java.lang.String)
+2018-10-22 23:03:17,382 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/sys/menu/first/create],methods=[POST]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.SysMenuFirstController.create(java.lang.String,java.lang.Integer)
+2018-10-22 23:03:17,383 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/sys/menu/first/select/all],methods=[GET]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.SysMenuFirstController.selectAll()
+2018-10-22 23:03:17,385 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/sys/menu/second/update],methods=[POST]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.SysMenuSecondController.update(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.Integer)
+2018-10-22 23:03:17,386 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/sys/menu/second/delete],methods=[POST]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.SysMenuSecondController.delete(java.lang.String)
+2018-10-22 23:03:17,389 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/sys/menu/second/create],methods=[POST]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.SysMenuSecondController.create(java.lang.String,java.lang.String,java.lang.String,java.lang.Integer)
+2018-10-22 23:03:17,390 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/sys/menu/second/select/all],methods=[GET]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.SysMenuSecondController.selectAll()
+2018-10-22 23:03:17,393 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/test],methods=[GET]}" onto public java.lang.Object com.example.demo.controller.TestController.test()
+2018-10-22 23:03:17,394 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/xxx],methods=[GET]}" onto public java.lang.Object com.example.demo.controller.TestController.xxx(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.Object>)
+2018-10-22 23:03:17,399 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/ddd],methods=[GET]}" onto public java.lang.Object com.example.demo.controller.TestController.ddd(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.Object>)
+2018-10-22 23:03:17,410 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/user/update],methods=[POST]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.UserController.update(java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+2018-10-22 23:03:17,413 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/user/login],methods=[POST]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.UserController.login(java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+2018-10-22 23:03:17,413 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/user/select/all],methods=[GET]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.UserController.selectAll(java.lang.Integer,java.lang.Integer)
+2018-10-22 23:03:17,415 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/user/select/user/by/id],methods=[GET]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.UserController.selectUserById(java.lang.String)
+2018-10-22 23:03:17,431 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-10-22 23:03:17,432 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-10-22 23:03:17,485 [main] INFO (AbstractUrlHandlerMapping.java:349)- Root mapping to handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+2018-10-22 23:03:17,530 [main] INFO (AbstractUrlHandlerMapping.java:362)- Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-10-22 23:03:17,536 [main] INFO (AbstractUrlHandlerMapping.java:362)- Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-10-22 23:03:17,610 [main] INFO (ExceptionHandlerExceptionResolver.java:273)- Detected @ExceptionHandler methods in controllerAdviceController
+2018-10-22 23:03:17,671 [main] INFO (AbstractUrlHandlerMapping.java:362)- Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-10-22 23:03:17,738 [main] INFO (WebMvcAutoConfiguration.java:549)- Adding welcome page: ServletContext resource [/index.html]
+2018-10-22 23:03:18,927 [main] INFO (DefaultLifecycleProcessor.java:343)- Starting beans in phase -2147482648
+2018-10-22 23:03:18,928 [main] INFO (DefaultLifecycleProcessor.java:343)- Starting beans in phase 2147483647
+2018-10-22 23:03:18,956 [main] INFO (StartupInfoLogger.java:57)- Started ApplicationTests in 13.388 seconds (JVM running for 17.633)
+2018-10-22 23:03:19,476 [Thread-5] INFO (AbstractApplicationContext.java:984)- Closing org.springframework.web.context.support.GenericWebApplicationContext@4a8355dd: startup date [Mon Oct 22 23:03:06 CST 2018]; root of context hierarchy
+2018-10-22 23:03:19,490 [Thread-5] INFO (DefaultLifecycleProcessor.java:358)- Stopping beans in phase 2147483647
+2018-10-22 23:03:19,491 [Thread-5] INFO (DefaultLifecycleProcessor.java:358)- Stopping beans in phase -2147482648
+2018-10-22 23:16:51,737 [main] INFO (StartupInfoLogger.java:48)- Starting Application on USER-20170606XK with PID 4220 (C:\Users\Administrator\Desktop\dianc\QiHeiDeHuaZhiGouHuo-spring-2-master\spring-2\target\classes started by Administrator in C:\Users\Administrator\Desktop\dianc\QiHeiDeHuaZhiGouHuo-spring-2-master\spring-2)
+2018-10-22 23:16:51,746 [main] INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
+2018-10-22 23:16:51,855 [main] INFO (AbstractApplicationContext.java:583)- Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4f24e46e: startup date [Mon Oct 22 23:16:51 CST 2018]; root of context hierarchy
+2018-10-22 23:16:53,394 [main] INFO (XmlBeanDefinitionReader.java:317)- Loading XML bean definitions from file [C:\Users\Administrator\Desktop\dianc\QiHeiDeHuaZhiGouHuo-spring-2-master\spring-2\target\classes\spring\spring-aop.xml]
+2018-10-22 23:16:53,616 [main] INFO (XmlBeanDefinitionReader.java:317)- Loading XML bean definitions from file [C:\Users\Administrator\Desktop\dianc\QiHeiDeHuaZhiGouHuo-spring-2-master\spring-2\target\classes\spring\spring-mvc.xml]
+2018-10-22 23:16:53,926 [main] INFO (RepositoryConfigurationDelegate.java:165)- Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-10-22 23:16:54,698 [main] INFO (PostProcessorRegistrationDelegate.java:325)- Bean 'commonConfig' of type [com.example.demo.config.bean.CommonConfig$$EnhancerBySpringCGLIB$$4dd27ed6] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-10-22 23:16:54,758 [main] INFO (PostProcessorRegistrationDelegate.java:325)- Bean 'messageSource' of type [org.springframework.context.support.ReloadableResourceBundleMessageSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-10-22 23:16:54,888 [main] INFO (PostProcessorRegistrationDelegate.java:325)- Bean 'validator' of type [org.springframework.validation.beanvalidation.LocalValidatorFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-10-22 23:16:54,938 [main] INFO (PostProcessorRegistrationDelegate.java:325)- Bean 'org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration' of type [org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration$$EnhancerBySpringCGLIB$$9c771706] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-10-22 23:16:56,218 [main] INFO (TomcatEmbeddedServletContainer.java:89)- Tomcat initialized with port(s): 8080 (http)
+2018-10-22 23:16:56,248 [main] INFO (DirectJDKLog.java:179)- Starting service [Tomcat]
+2018-10-22 23:16:56,248 [main] INFO (DirectJDKLog.java:179)- Starting Servlet Engine: Apache Tomcat/8.5.15
+2018-10-22 23:16:56,518 [localhost-startStop-1] INFO (DirectJDKLog.java:179)- Initializing Spring embedded WebApplicationContext
+2018-10-22 23:16:56,528 [localhost-startStop-1] INFO (EmbeddedWebApplicationContext.java:276)- Root WebApplicationContext: initialization completed in 4673 ms
+2018-10-22 23:16:57,104 [localhost-startStop-1] INFO (ServletRegistrationBean.java:190)- Mapping servlet: 'dispatcherServlet' to [/]
+2018-10-22 23:16:57,110 [localhost-startStop-1] INFO (ServletRegistrationBean.java:190)- Mapping servlet: 'statViewServlet' to [/druid/*]
+2018-10-22 23:16:57,119 [localhost-startStop-1] INFO (AbstractFilterRegistrationBean.java:258)- Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-10-22 23:16:57,122 [localhost-startStop-1] INFO (AbstractFilterRegistrationBean.java:258)- Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-10-22 23:16:57,124 [localhost-startStop-1] INFO (AbstractFilterRegistrationBean.java:258)- Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-10-22 23:16:57,127 [localhost-startStop-1] INFO (AbstractFilterRegistrationBean.java:258)- Mapping filter: 'requestContextFilter' to: [/*]
+2018-10-22 23:16:57,129 [localhost-startStop-1] INFO (AbstractFilterRegistrationBean.java:271)- Mapping filter: 'webStatFilter' to urls: [/*]
+2018-10-22 23:16:57,131 [localhost-startStop-1] INFO (AbstractFilterRegistrationBean.java:258)- Mapping filter: 'webContextFilter' to: [/*]
+2018-10-22 23:17:01,050 [main] INFO (RequestMappingHandlerAdapter.java:534)- Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4f24e46e: startup date [Mon Oct 22 23:16:51 CST 2018]; root of context hierarchy
+2018-10-22 23:17:01,220 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/file/upload/a/multipart/file],methods=[POST]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.FileUploadController.aMultipartFile(org.springframework.web.multipart.MultipartFile)
+2018-10-22 23:17:01,230 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/food/update],methods=[POST]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.FoodController.update(java.lang.String,java.lang.String,java.lang.String,java.lang.Double,java.lang.String,java.lang.String,java.lang.Integer,java.lang.Integer,java.lang.String,java.lang.String,java.lang.String)
+2018-10-22 23:17:01,230 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/food/delete/one/by/id],methods=[POST]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.FoodController.delete(java.lang.String)
+2018-10-22 23:17:01,230 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/food/create],methods=[POST]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.FoodController.create(java.lang.String,java.lang.String,java.lang.Double,java.lang.String,java.lang.String,java.lang.Integer,java.lang.Integer,java.lang.String,java.lang.String,java.lang.String)
+2018-10-22 23:17:01,240 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/food/select/one/by/id],methods=[GET]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.FoodController.selectOneById(java.lang.String)
+2018-10-22 23:17:01,240 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/food/select/all/for/sys],methods=[GET]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.FoodController.selectAllForSys(java.lang.Integer,java.lang.Integer)
+2018-10-22 23:17:01,240 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/food/select/all],methods=[GET]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.FoodController.selectAll()
+2018-10-22 23:17:01,250 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/menu/classify/update],methods=[POST]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.MenuClassifyController.update(java.lang.String,java.lang.String,java.lang.Integer)
+2018-10-22 23:17:01,250 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/menu/classify/delete],methods=[POST]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.MenuClassifyController.delete(java.lang.String)
+2018-10-22 23:17:01,250 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/menu/classify/create],methods=[POST]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.MenuClassifyController.create(java.lang.String,java.lang.Integer)
+2018-10-22 23:17:01,260 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/menu/classify/select/one/by/id],methods=[GET]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.MenuClassifyController.selectOneById(java.lang.String)
+2018-10-22 23:17:01,260 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/menu/classify/select/all/for/sys],methods=[GET]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.MenuClassifyController.selectAllForSys(java.lang.Integer,java.lang.Integer)
+2018-10-22 23:17:01,260 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/menu/classify/select/all],methods=[GET]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.MenuClassifyController.selectAll()
+2018-10-22 23:17:01,270 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/order/form/update],methods=[POST]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.OrderFormController.update(java.lang.String,java.lang.Integer)
+2018-10-22 23:17:01,270 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/order/form/create],methods=[POST]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.OrderFormController.create(com.example.demo.pojo.po.OrderFormPo)
+2018-10-22 23:17:01,270 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/order/form/select/one/by/id],methods=[GET]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.OrderFormController.selectOneById(java.lang.String)
+2018-10-22 23:17:01,270 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/order/form/wx/notify],methods=[GET || POST]}" onto public java.lang.Object com.example.demo.controller.OrderFormController.wxNotify()
+2018-10-22 23:17:01,270 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/order/form/select/all],methods=[GET]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.OrderFormController.selectAll(java.lang.String,java.lang.Boolean,java.lang.String,java.lang.Integer,java.lang.Integer)
+2018-10-22 23:17:01,280 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/phone/code/check/for/{business}],methods=[GET]}" onto public java.lang.Object com.example.demo.controller.PhoneCodeController.checkForBusiness(java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+2018-10-22 23:17:01,280 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/phone/code/send/for/{business}],methods=[GET]}" onto public java.lang.Object com.example.demo.controller.PhoneCodeController.sendForBusiness(java.lang.String,java.lang.String,java.lang.String)
+2018-10-22 23:17:01,280 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/sys/menu/first/update],methods=[POST]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.SysMenuFirstController.update(java.lang.String,java.lang.String,java.lang.Integer)
+2018-10-22 23:17:01,280 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/sys/menu/first/delete],methods=[POST]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.SysMenuFirstController.delete(java.lang.String)
+2018-10-22 23:17:01,280 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/sys/menu/first/create],methods=[POST]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.SysMenuFirstController.create(java.lang.String,java.lang.Integer)
+2018-10-22 23:17:01,280 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/sys/menu/first/select/all],methods=[GET]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.SysMenuFirstController.selectAll()
+2018-10-22 23:17:01,290 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/sys/menu/second/update],methods=[POST]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.SysMenuSecondController.update(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.Integer)
+2018-10-22 23:17:01,290 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/sys/menu/second/delete],methods=[POST]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.SysMenuSecondController.delete(java.lang.String)
+2018-10-22 23:17:01,300 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/sys/menu/second/create],methods=[POST]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.SysMenuSecondController.create(java.lang.String,java.lang.String,java.lang.String,java.lang.Integer)
+2018-10-22 23:17:01,300 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/sys/menu/second/select/all],methods=[GET]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.SysMenuSecondController.selectAll()
+2018-10-22 23:17:01,300 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/test],methods=[GET]}" onto public java.lang.Object com.example.demo.controller.TestController.test()
+2018-10-22 23:17:01,300 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/xxx],methods=[GET]}" onto public java.lang.Object com.example.demo.controller.TestController.xxx(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.Object>)
+2018-10-22 23:17:01,300 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/ddd],methods=[GET]}" onto public java.lang.Object com.example.demo.controller.TestController.ddd(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.Object>)
+2018-10-22 23:17:01,300 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/user/update],methods=[POST]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.UserController.update(java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+2018-10-22 23:17:01,310 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/user/login],methods=[POST]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.UserController.login(java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+2018-10-22 23:17:01,310 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/user/select/user/by/id],methods=[GET]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.UserController.selectUserById(java.lang.String)
+2018-10-22 23:17:01,310 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/user/select/all],methods=[GET]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.UserController.selectAll(java.lang.Integer,java.lang.Integer)
+2018-10-22 23:17:01,310 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-10-22 23:17:01,320 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-10-22 23:17:01,370 [main] INFO (AbstractUrlHandlerMapping.java:349)- Root mapping to handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+2018-10-22 23:17:01,410 [main] INFO (AbstractUrlHandlerMapping.java:362)- Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-10-22 23:17:01,410 [main] INFO (AbstractUrlHandlerMapping.java:362)- Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-10-22 23:17:01,500 [main] INFO (ExceptionHandlerExceptionResolver.java:273)- Detected @ExceptionHandler methods in controllerAdviceController
+2018-10-22 23:17:01,540 [main] INFO (AbstractUrlHandlerMapping.java:362)- Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-10-22 23:17:01,600 [main] INFO (WebMvcAutoConfiguration.java:549)- Adding welcome page: class path resource [static/index.html]
+2018-10-22 23:17:02,532 [main] INFO (MBeanExporter.java:431)- Registering beans for JMX exposure on startup
+2018-10-22 23:17:02,532 [main] INFO (MBeanExporter.java:916)- Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-10-22 23:17:02,552 [main] INFO (MBeanExporter.java:916)- Bean with name 'rabbitConnectionFactory' has been autodetected for JMX exposure
+2018-10-22 23:17:02,552 [main] INFO (MBeanExporter.java:671)- Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+2018-10-22 23:17:02,562 [main] INFO (MBeanExporter.java:678)- Located managed bean 'rabbitConnectionFactory': registering with JMX server as MBean [org.springframework.amqp.rabbit.connection:name=rabbitConnectionFactory,type=CachingConnectionFactory]
+2018-10-22 23:17:02,612 [main] INFO (DefaultLifecycleProcessor.java:343)- Starting beans in phase -2147482648
+2018-10-22 23:17:02,612 [main] INFO (DefaultLifecycleProcessor.java:343)- Starting beans in phase 2147483647
+2018-10-22 23:17:02,674 [main] ERROR (DirectJDKLog.java:181)- Failed to start end point associated with ProtocolHandler ["http-nio-8080"]
+java.net.BindException: Address already in use: bind
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Net.java:433)
+	at sun.nio.ch.Net.bind(Net.java:425)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223)
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:210)
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:978)
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:628)
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1022)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:225)
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.addPreviouslyRemovedConnectors(TomcatEmbeddedServletContainer.java:250)
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.start(TomcatEmbeddedServletContainer.java:193)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.startEmbeddedServletContainer(EmbeddedWebApplicationContext.java:297)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.finishRefresh(EmbeddedWebApplicationContext.java:145)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:546)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107)
+	at com.example.demo.Application.main(Application.java:16)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.maven.AbstractRunMojo$LaunchRunner.run(AbstractRunMojo.java:527)
+	at java.lang.Thread.run(Thread.java:748)
+2018-10-22 23:17:02,680 [main] ERROR (DirectJDKLog.java:181)- Failed to start connector [Connector[HTTP/1.1-8080]]
+org.apache.catalina.LifecycleException: Failed to start component [Connector[HTTP/1.1-8080]]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:167)
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:225)
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.addPreviouslyRemovedConnectors(TomcatEmbeddedServletContainer.java:250)
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.start(TomcatEmbeddedServletContainer.java:193)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.startEmbeddedServletContainer(EmbeddedWebApplicationContext.java:297)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.finishRefresh(EmbeddedWebApplicationContext.java:145)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:546)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107)
+	at com.example.demo.Application.main(Application.java:16)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.maven.AbstractRunMojo$LaunchRunner.run(AbstractRunMojo.java:527)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.apache.catalina.LifecycleException: service.getName(): "Tomcat";  Protocol handler start failed
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1029)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	... 19 common frames omitted
+Caused by: java.net.BindException: Address already in use: bind
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Net.java:433)
+	at sun.nio.ch.Net.bind(Net.java:425)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223)
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:210)
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:978)
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:628)
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1022)
+	... 20 common frames omitted
+2018-10-22 23:17:02,694 [main] INFO (DirectJDKLog.java:179)- Stopping service [Tomcat]
+2018-10-22 23:17:02,824 [main] INFO (AutoConfigurationReportLoggingInitializer.java:101)- 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+2018-10-22 23:17:02,834 [main] ERROR (LoggingFailureAnalysisReporter.java:42)- 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The Tomcat connector configured to listen on port 8080 failed to start. The port may already be in use or the connector may be misconfigured.
+
+Action:
+
+Verify the connector's configuration, identify and stop any process that's listening on port 8080, or configure this application to listen on another port.
+
+2018-10-22 23:17:02,834 [main] INFO (AbstractApplicationContext.java:984)- Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4f24e46e: startup date [Mon Oct 22 23:16:51 CST 2018]; root of context hierarchy
+2018-10-22 23:17:02,844 [main] INFO (DefaultLifecycleProcessor.java:358)- Stopping beans in phase 2147483647
+2018-10-22 23:17:02,844 [main] INFO (DefaultLifecycleProcessor.java:358)- Stopping beans in phase -2147482648
+2018-10-22 23:17:02,844 [main] INFO (MBeanExporter.java:449)- Unregistering JMX-exposed beans on shutdown
+2018-10-22 23:17:02,854 [main] INFO (MBeanRegistrationSupport.java:241)- Unregistering JMX-exposed beans
+2018-10-22 23:18:31,089 [main] INFO (StartupInfoLogger.java:48)- Starting Application on USER-20170606XK with PID 2364 (C:\Users\Administrator\Desktop\dianc\QiHeiDeHuaZhiGouHuo-spring-2-master\spring-2\target\classes started by Administrator in C:\Users\Administrator\Desktop\dianc\QiHeiDeHuaZhiGouHuo-spring-2-master\spring-2)
+2018-10-22 23:18:31,096 [main] INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
+2018-10-22 23:18:31,193 [main] INFO (AbstractApplicationContext.java:583)- Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@381e8f89: startup date [Mon Oct 22 23:18:31 CST 2018]; root of context hierarchy
+2018-10-22 23:18:32,593 [main] INFO (XmlBeanDefinitionReader.java:317)- Loading XML bean definitions from file [C:\Users\Administrator\Desktop\dianc\QiHeiDeHuaZhiGouHuo-spring-2-master\spring-2\target\classes\spring\spring-aop.xml]
+2018-10-22 23:18:32,877 [main] INFO (XmlBeanDefinitionReader.java:317)- Loading XML bean definitions from file [C:\Users\Administrator\Desktop\dianc\QiHeiDeHuaZhiGouHuo-spring-2-master\spring-2\target\classes\spring\spring-mvc.xml]
+2018-10-22 23:18:33,219 [main] INFO (RepositoryConfigurationDelegate.java:165)- Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-10-22 23:18:33,921 [main] INFO (PostProcessorRegistrationDelegate.java:325)- Bean 'commonConfig' of type [com.example.demo.config.bean.CommonConfig$$EnhancerBySpringCGLIB$$16c4bc18] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-10-22 23:18:33,981 [main] INFO (PostProcessorRegistrationDelegate.java:325)- Bean 'messageSource' of type [org.springframework.context.support.ReloadableResourceBundleMessageSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-10-22 23:18:34,081 [main] INFO (PostProcessorRegistrationDelegate.java:325)- Bean 'validator' of type [org.springframework.validation.beanvalidation.LocalValidatorFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-10-22 23:18:34,131 [main] INFO (PostProcessorRegistrationDelegate.java:325)- Bean 'org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration' of type [org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration$$EnhancerBySpringCGLIB$$65695448] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-10-22 23:18:35,361 [main] INFO (TomcatEmbeddedServletContainer.java:89)- Tomcat initialized with port(s): 8080 (http)
+2018-10-22 23:18:35,391 [main] INFO (DirectJDKLog.java:179)- Starting service [Tomcat]
+2018-10-22 23:18:35,401 [main] INFO (DirectJDKLog.java:179)- Starting Servlet Engine: Apache Tomcat/8.5.15
+2018-10-22 23:18:35,571 [localhost-startStop-1] INFO (DirectJDKLog.java:179)- Initializing Spring embedded WebApplicationContext
+2018-10-22 23:18:35,581 [localhost-startStop-1] INFO (EmbeddedWebApplicationContext.java:276)- Root WebApplicationContext: initialization completed in 4388 ms
+2018-10-22 23:18:36,023 [localhost-startStop-1] INFO (ServletRegistrationBean.java:190)- Mapping servlet: 'dispatcherServlet' to [/]
+2018-10-22 23:18:36,023 [localhost-startStop-1] INFO (ServletRegistrationBean.java:190)- Mapping servlet: 'statViewServlet' to [/druid/*]
+2018-10-22 23:18:36,033 [localhost-startStop-1] INFO (AbstractFilterRegistrationBean.java:258)- Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-10-22 23:18:36,043 [localhost-startStop-1] INFO (AbstractFilterRegistrationBean.java:258)- Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-10-22 23:18:36,043 [localhost-startStop-1] INFO (AbstractFilterRegistrationBean.java:258)- Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-10-22 23:18:36,043 [localhost-startStop-1] INFO (AbstractFilterRegistrationBean.java:258)- Mapping filter: 'requestContextFilter' to: [/*]
+2018-10-22 23:18:36,043 [localhost-startStop-1] INFO (AbstractFilterRegistrationBean.java:271)- Mapping filter: 'webStatFilter' to urls: [/*]
+2018-10-22 23:18:36,043 [localhost-startStop-1] INFO (AbstractFilterRegistrationBean.java:258)- Mapping filter: 'webContextFilter' to: [/*]
+2018-10-22 23:18:39,301 [main] INFO (RequestMappingHandlerAdapter.java:534)- Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@381e8f89: startup date [Mon Oct 22 23:18:31 CST 2018]; root of context hierarchy
+2018-10-22 23:18:39,441 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/file/upload/a/multipart/file],methods=[POST]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.FileUploadController.aMultipartFile(org.springframework.web.multipart.MultipartFile)
+2018-10-22 23:18:39,451 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/food/update],methods=[POST]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.FoodController.update(java.lang.String,java.lang.String,java.lang.String,java.lang.Double,java.lang.String,java.lang.String,java.lang.Integer,java.lang.Integer,java.lang.String,java.lang.String,java.lang.String)
+2018-10-22 23:18:39,451 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/food/delete/one/by/id],methods=[POST]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.FoodController.delete(java.lang.String)
+2018-10-22 23:18:39,461 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/food/create],methods=[POST]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.FoodController.create(java.lang.String,java.lang.String,java.lang.Double,java.lang.String,java.lang.String,java.lang.Integer,java.lang.Integer,java.lang.String,java.lang.String,java.lang.String)
+2018-10-22 23:18:39,461 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/food/select/all],methods=[GET]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.FoodController.selectAll()
+2018-10-22 23:18:39,461 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/food/select/one/by/id],methods=[GET]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.FoodController.selectOneById(java.lang.String)
+2018-10-22 23:18:39,461 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/food/select/all/for/sys],methods=[GET]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.FoodController.selectAllForSys(java.lang.Integer,java.lang.Integer)
+2018-10-22 23:18:39,471 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/menu/classify/update],methods=[POST]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.MenuClassifyController.update(java.lang.String,java.lang.String,java.lang.Integer)
+2018-10-22 23:18:39,471 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/menu/classify/delete],methods=[POST]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.MenuClassifyController.delete(java.lang.String)
+2018-10-22 23:18:39,471 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/menu/classify/create],methods=[POST]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.MenuClassifyController.create(java.lang.String,java.lang.Integer)
+2018-10-22 23:18:39,471 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/menu/classify/select/all],methods=[GET]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.MenuClassifyController.selectAll()
+2018-10-22 23:18:39,471 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/menu/classify/select/one/by/id],methods=[GET]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.MenuClassifyController.selectOneById(java.lang.String)
+2018-10-22 23:18:39,471 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/menu/classify/select/all/for/sys],methods=[GET]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.MenuClassifyController.selectAllForSys(java.lang.Integer,java.lang.Integer)
+2018-10-22 23:18:39,481 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/order/form/update],methods=[POST]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.OrderFormController.update(java.lang.String,java.lang.Integer)
+2018-10-22 23:18:39,481 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/order/form/create],methods=[POST]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.OrderFormController.create(com.example.demo.pojo.po.OrderFormPo)
+2018-10-22 23:18:39,491 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/order/form/select/all],methods=[GET]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.OrderFormController.selectAll(java.lang.String,java.lang.Boolean,java.lang.String,java.lang.Integer,java.lang.Integer)
+2018-10-22 23:18:39,491 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/order/form/select/one/by/id],methods=[GET]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.OrderFormController.selectOneById(java.lang.String)
+2018-10-22 23:18:39,491 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/order/form/wx/notify],methods=[GET || POST]}" onto public java.lang.Object com.example.demo.controller.OrderFormController.wxNotify()
+2018-10-22 23:18:39,491 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/phone/code/check/for/{business}],methods=[GET]}" onto public java.lang.Object com.example.demo.controller.PhoneCodeController.checkForBusiness(java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+2018-10-22 23:18:39,491 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/phone/code/send/for/{business}],methods=[GET]}" onto public java.lang.Object com.example.demo.controller.PhoneCodeController.sendForBusiness(java.lang.String,java.lang.String,java.lang.String)
+2018-10-22 23:18:39,501 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/sys/menu/first/update],methods=[POST]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.SysMenuFirstController.update(java.lang.String,java.lang.String,java.lang.Integer)
+2018-10-22 23:18:39,501 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/sys/menu/first/delete],methods=[POST]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.SysMenuFirstController.delete(java.lang.String)
+2018-10-22 23:18:39,501 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/sys/menu/first/create],methods=[POST]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.SysMenuFirstController.create(java.lang.String,java.lang.Integer)
+2018-10-22 23:18:39,501 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/sys/menu/first/select/all],methods=[GET]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.SysMenuFirstController.selectAll()
+2018-10-22 23:18:39,501 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/sys/menu/second/update],methods=[POST]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.SysMenuSecondController.update(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.Integer)
+2018-10-22 23:18:39,511 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/sys/menu/second/delete],methods=[POST]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.SysMenuSecondController.delete(java.lang.String)
+2018-10-22 23:18:39,511 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/sys/menu/second/create],methods=[POST]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.SysMenuSecondController.create(java.lang.String,java.lang.String,java.lang.String,java.lang.Integer)
+2018-10-22 23:18:39,511 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/sys/menu/second/select/all],methods=[GET]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.SysMenuSecondController.selectAll()
+2018-10-22 23:18:39,511 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/test],methods=[GET]}" onto public java.lang.Object com.example.demo.controller.TestController.test()
+2018-10-22 23:18:39,511 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/xxx],methods=[GET]}" onto public java.lang.Object com.example.demo.controller.TestController.xxx(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.Object>)
+2018-10-22 23:18:39,511 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/ddd],methods=[GET]}" onto public java.lang.Object com.example.demo.controller.TestController.ddd(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.Object>)
+2018-10-22 23:18:39,521 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/user/update],methods=[POST]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.UserController.update(java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+2018-10-22 23:18:39,521 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/user/select/all],methods=[GET]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.UserController.selectAll(java.lang.Integer,java.lang.Integer)
+2018-10-22 23:18:39,521 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/user/login],methods=[POST]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.UserController.login(java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+2018-10-22 23:18:39,521 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/user/select/user/by/id],methods=[GET]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.UserController.selectUserById(java.lang.String)
+2018-10-22 23:18:39,521 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-10-22 23:18:39,531 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-10-22 23:18:39,571 [main] INFO (AbstractUrlHandlerMapping.java:349)- Root mapping to handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+2018-10-22 23:18:39,611 [main] INFO (AbstractUrlHandlerMapping.java:362)- Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-10-22 23:18:39,611 [main] INFO (AbstractUrlHandlerMapping.java:362)- Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-10-22 23:18:39,651 [main] INFO (ExceptionHandlerExceptionResolver.java:273)- Detected @ExceptionHandler methods in controllerAdviceController
+2018-10-22 23:18:39,701 [main] INFO (AbstractUrlHandlerMapping.java:362)- Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-10-22 23:18:39,741 [main] INFO (WebMvcAutoConfiguration.java:549)- Adding welcome page: class path resource [static/index.html]
+2018-10-22 23:18:40,623 [main] INFO (MBeanExporter.java:431)- Registering beans for JMX exposure on startup
+2018-10-22 23:18:40,623 [main] INFO (MBeanExporter.java:916)- Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-10-22 23:18:40,633 [main] INFO (MBeanExporter.java:916)- Bean with name 'rabbitConnectionFactory' has been autodetected for JMX exposure
+2018-10-22 23:18:40,643 [main] INFO (MBeanExporter.java:671)- Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+2018-10-22 23:18:40,653 [main] INFO (MBeanExporter.java:678)- Located managed bean 'rabbitConnectionFactory': registering with JMX server as MBean [org.springframework.amqp.rabbit.connection:name=rabbitConnectionFactory,type=CachingConnectionFactory]
+2018-10-22 23:18:40,683 [main] INFO (DefaultLifecycleProcessor.java:343)- Starting beans in phase -2147482648
+2018-10-22 23:18:40,683 [main] INFO (DefaultLifecycleProcessor.java:343)- Starting beans in phase 2147483647
+2018-10-22 23:18:40,733 [main] ERROR (DirectJDKLog.java:181)- Failed to start end point associated with ProtocolHandler ["http-nio-8080"]
+java.net.BindException: Address already in use: bind
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Net.java:433)
+	at sun.nio.ch.Net.bind(Net.java:425)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223)
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:210)
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:978)
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:628)
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1022)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:225)
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.addPreviouslyRemovedConnectors(TomcatEmbeddedServletContainer.java:250)
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.start(TomcatEmbeddedServletContainer.java:193)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.startEmbeddedServletContainer(EmbeddedWebApplicationContext.java:297)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.finishRefresh(EmbeddedWebApplicationContext.java:145)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:546)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107)
+	at com.example.demo.Application.main(Application.java:16)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.maven.AbstractRunMojo$LaunchRunner.run(AbstractRunMojo.java:527)
+	at java.lang.Thread.run(Thread.java:748)
+2018-10-22 23:18:40,743 [main] ERROR (DirectJDKLog.java:181)- Failed to start connector [Connector[HTTP/1.1-8080]]
+org.apache.catalina.LifecycleException: Failed to start component [Connector[HTTP/1.1-8080]]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:167)
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:225)
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.addPreviouslyRemovedConnectors(TomcatEmbeddedServletContainer.java:250)
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.start(TomcatEmbeddedServletContainer.java:193)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.startEmbeddedServletContainer(EmbeddedWebApplicationContext.java:297)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.finishRefresh(EmbeddedWebApplicationContext.java:145)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:546)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107)
+	at com.example.demo.Application.main(Application.java:16)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.maven.AbstractRunMojo$LaunchRunner.run(AbstractRunMojo.java:527)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.apache.catalina.LifecycleException: service.getName(): "Tomcat";  Protocol handler start failed
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1029)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	... 19 common frames omitted
+Caused by: java.net.BindException: Address already in use: bind
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Net.java:433)
+	at sun.nio.ch.Net.bind(Net.java:425)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223)
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:210)
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:978)
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:628)
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1022)
+	... 20 common frames omitted
+2018-10-22 23:18:40,763 [main] INFO (DirectJDKLog.java:179)- Stopping service [Tomcat]
+2018-10-22 23:18:40,813 [main] INFO (AutoConfigurationReportLoggingInitializer.java:101)- 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+2018-10-22 23:18:40,823 [main] ERROR (LoggingFailureAnalysisReporter.java:42)- 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The Tomcat connector configured to listen on port 8080 failed to start. The port may already be in use or the connector may be misconfigured.
+
+Action:
+
+Verify the connector's configuration, identify and stop any process that's listening on port 8080, or configure this application to listen on another port.
+
+2018-10-22 23:18:40,823 [main] INFO (AbstractApplicationContext.java:984)- Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@381e8f89: startup date [Mon Oct 22 23:18:31 CST 2018]; root of context hierarchy
+2018-10-22 23:18:40,833 [main] INFO (DefaultLifecycleProcessor.java:358)- Stopping beans in phase 2147483647
+2018-10-22 23:18:40,833 [main] INFO (DefaultLifecycleProcessor.java:358)- Stopping beans in phase -2147482648
+2018-10-22 23:18:40,833 [main] INFO (MBeanExporter.java:449)- Unregistering JMX-exposed beans on shutdown
+2018-10-22 23:18:40,833 [main] INFO (MBeanRegistrationSupport.java:241)- Unregistering JMX-exposed beans
+2018-10-22 23:19:35,026 [main] INFO (StartupInfoLogger.java:48)- Starting Application on USER-20170606XK with PID 6004 (C:\Users\Administrator\Desktop\dianc\QiHeiDeHuaZhiGouHuo-spring-2-master\spring-2\target\classes started by Administrator in C:\Users\Administrator\Desktop\dianc\QiHeiDeHuaZhiGouHuo-spring-2-master\spring-2)
+2018-10-22 23:19:35,036 [main] INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
+2018-10-22 23:19:35,150 [main] INFO (AbstractApplicationContext.java:583)- Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1bf4d01b: startup date [Mon Oct 22 23:19:35 CST 2018]; root of context hierarchy
+2018-10-22 23:19:36,610 [main] INFO (XmlBeanDefinitionReader.java:317)- Loading XML bean definitions from file [C:\Users\Administrator\Desktop\dianc\QiHeiDeHuaZhiGouHuo-spring-2-master\spring-2\target\classes\spring\spring-aop.xml]
+2018-10-22 23:19:36,922 [main] INFO (XmlBeanDefinitionReader.java:317)- Loading XML bean definitions from file [C:\Users\Administrator\Desktop\dianc\QiHeiDeHuaZhiGouHuo-spring-2-master\spring-2\target\classes\spring\spring-mvc.xml]
+2018-10-22 23:19:37,254 [main] INFO (RepositoryConfigurationDelegate.java:165)- Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-10-22 23:19:37,966 [main] INFO (PostProcessorRegistrationDelegate.java:325)- Bean 'commonConfig' of type [com.example.demo.config.bean.CommonConfig$$EnhancerBySpringCGLIB$$409b4c8f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-10-22 23:19:38,026 [main] INFO (PostProcessorRegistrationDelegate.java:325)- Bean 'messageSource' of type [org.springframework.context.support.ReloadableResourceBundleMessageSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-10-22 23:19:38,156 [main] INFO (PostProcessorRegistrationDelegate.java:325)- Bean 'validator' of type [org.springframework.validation.beanvalidation.LocalValidatorFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-10-22 23:19:38,196 [main] INFO (PostProcessorRegistrationDelegate.java:325)- Bean 'org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration' of type [org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration$$EnhancerBySpringCGLIB$$8f3fe4bf] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-10-22 23:19:39,506 [main] INFO (TomcatEmbeddedServletContainer.java:89)- Tomcat initialized with port(s): 8080 (http)
+2018-10-22 23:19:39,536 [main] INFO (DirectJDKLog.java:179)- Starting service [Tomcat]
+2018-10-22 23:19:39,536 [main] INFO (DirectJDKLog.java:179)- Starting Servlet Engine: Apache Tomcat/8.5.15
+2018-10-22 23:19:39,726 [localhost-startStop-1] INFO (DirectJDKLog.java:179)- Initializing Spring embedded WebApplicationContext
+2018-10-22 23:19:39,726 [localhost-startStop-1] INFO (EmbeddedWebApplicationContext.java:276)- Root WebApplicationContext: initialization completed in 4576 ms
+2018-10-22 23:19:40,106 [localhost-startStop-1] INFO (ServletRegistrationBean.java:190)- Mapping servlet: 'dispatcherServlet' to [/]
+2018-10-22 23:19:40,116 [localhost-startStop-1] INFO (ServletRegistrationBean.java:190)- Mapping servlet: 'statViewServlet' to [/druid/*]
+2018-10-22 23:19:40,116 [localhost-startStop-1] INFO (AbstractFilterRegistrationBean.java:258)- Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-10-22 23:19:40,116 [localhost-startStop-1] INFO (AbstractFilterRegistrationBean.java:258)- Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-10-22 23:19:40,116 [localhost-startStop-1] INFO (AbstractFilterRegistrationBean.java:258)- Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-10-22 23:19:40,126 [localhost-startStop-1] INFO (AbstractFilterRegistrationBean.java:258)- Mapping filter: 'requestContextFilter' to: [/*]
+2018-10-22 23:19:40,126 [localhost-startStop-1] INFO (AbstractFilterRegistrationBean.java:271)- Mapping filter: 'webStatFilter' to urls: [/*]
+2018-10-22 23:19:40,126 [localhost-startStop-1] INFO (AbstractFilterRegistrationBean.java:258)- Mapping filter: 'webContextFilter' to: [/*]
+2018-10-22 23:19:43,412 [main] INFO (RequestMappingHandlerAdapter.java:534)- Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1bf4d01b: startup date [Mon Oct 22 23:19:35 CST 2018]; root of context hierarchy
+2018-10-22 23:19:43,542 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/file/upload/a/multipart/file],methods=[POST]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.FileUploadController.aMultipartFile(org.springframework.web.multipart.MultipartFile)
+2018-10-22 23:19:43,542 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/food/update],methods=[POST]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.FoodController.update(java.lang.String,java.lang.String,java.lang.String,java.lang.Double,java.lang.String,java.lang.String,java.lang.Integer,java.lang.Integer,java.lang.String,java.lang.String,java.lang.String)
+2018-10-22 23:19:43,542 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/food/delete/one/by/id],methods=[POST]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.FoodController.delete(java.lang.String)
+2018-10-22 23:19:43,552 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/food/create],methods=[POST]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.FoodController.create(java.lang.String,java.lang.String,java.lang.Double,java.lang.String,java.lang.String,java.lang.Integer,java.lang.Integer,java.lang.String,java.lang.String,java.lang.String)
+2018-10-22 23:19:43,552 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/food/select/all],methods=[GET]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.FoodController.selectAll()
+2018-10-22 23:19:43,552 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/food/select/one/by/id],methods=[GET]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.FoodController.selectOneById(java.lang.String)
+2018-10-22 23:19:43,552 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/food/select/all/for/sys],methods=[GET]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.FoodController.selectAllForSys(java.lang.Integer,java.lang.Integer)
+2018-10-22 23:19:43,562 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/menu/classify/update],methods=[POST]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.MenuClassifyController.update(java.lang.String,java.lang.String,java.lang.Integer)
+2018-10-22 23:19:43,562 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/menu/classify/delete],methods=[POST]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.MenuClassifyController.delete(java.lang.String)
+2018-10-22 23:19:43,562 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/menu/classify/create],methods=[POST]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.MenuClassifyController.create(java.lang.String,java.lang.Integer)
+2018-10-22 23:19:43,562 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/menu/classify/select/all],methods=[GET]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.MenuClassifyController.selectAll()
+2018-10-22 23:19:43,572 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/menu/classify/select/one/by/id],methods=[GET]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.MenuClassifyController.selectOneById(java.lang.String)
+2018-10-22 23:19:43,572 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/menu/classify/select/all/for/sys],methods=[GET]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.MenuClassifyController.selectAllForSys(java.lang.Integer,java.lang.Integer)
+2018-10-22 23:19:43,582 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/order/form/update],methods=[POST]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.OrderFormController.update(java.lang.String,java.lang.Integer)
+2018-10-22 23:19:43,582 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/order/form/create],methods=[POST]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.OrderFormController.create(com.example.demo.pojo.po.OrderFormPo)
+2018-10-22 23:19:43,582 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/order/form/select/all],methods=[GET]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.OrderFormController.selectAll(java.lang.String,java.lang.Boolean,java.lang.String,java.lang.Integer,java.lang.Integer)
+2018-10-22 23:19:43,582 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/order/form/select/one/by/id],methods=[GET]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.OrderFormController.selectOneById(java.lang.String)
+2018-10-22 23:19:43,582 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/order/form/wx/notify],methods=[GET || POST]}" onto public java.lang.Object com.example.demo.controller.OrderFormController.wxNotify()
+2018-10-22 23:19:43,592 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/phone/code/check/for/{business}],methods=[GET]}" onto public java.lang.Object com.example.demo.controller.PhoneCodeController.checkForBusiness(java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+2018-10-22 23:19:43,592 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/phone/code/send/for/{business}],methods=[GET]}" onto public java.lang.Object com.example.demo.controller.PhoneCodeController.sendForBusiness(java.lang.String,java.lang.String,java.lang.String)
+2018-10-22 23:19:43,592 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/sys/menu/first/update],methods=[POST]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.SysMenuFirstController.update(java.lang.String,java.lang.String,java.lang.Integer)
+2018-10-22 23:19:43,592 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/sys/menu/first/delete],methods=[POST]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.SysMenuFirstController.delete(java.lang.String)
+2018-10-22 23:19:43,592 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/sys/menu/first/create],methods=[POST]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.SysMenuFirstController.create(java.lang.String,java.lang.Integer)
+2018-10-22 23:19:43,602 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/sys/menu/first/select/all],methods=[GET]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.SysMenuFirstController.selectAll()
+2018-10-22 23:19:43,602 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/sys/menu/second/update],methods=[POST]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.SysMenuSecondController.update(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.Integer)
+2018-10-22 23:19:43,602 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/sys/menu/second/delete],methods=[POST]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.SysMenuSecondController.delete(java.lang.String)
+2018-10-22 23:19:43,602 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/sys/menu/second/create],methods=[POST]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.SysMenuSecondController.create(java.lang.String,java.lang.String,java.lang.String,java.lang.Integer)
+2018-10-22 23:19:43,612 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/sys/menu/second/select/all],methods=[GET]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.SysMenuSecondController.selectAll()
+2018-10-22 23:19:43,612 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/test],methods=[GET]}" onto public java.lang.Object com.example.demo.controller.TestController.test()
+2018-10-22 23:19:43,612 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/xxx],methods=[GET]}" onto public java.lang.Object com.example.demo.controller.TestController.xxx(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.Object>)
+2018-10-22 23:19:43,612 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/ddd],methods=[GET]}" onto public java.lang.Object com.example.demo.controller.TestController.ddd(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.Object>)
+2018-10-22 23:19:43,612 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/user/update],methods=[POST]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.UserController.update(java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+2018-10-22 23:19:43,622 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/user/select/all],methods=[GET]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.UserController.selectAll(java.lang.Integer,java.lang.Integer)
+2018-10-22 23:19:43,622 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/user/login],methods=[POST]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.UserController.login(java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+2018-10-22 23:19:43,622 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/user/select/user/by/id],methods=[GET]}" onto public com.example.demo.config.bean.entity.ResultMap com.example.demo.controller.UserController.selectUserById(java.lang.String)
+2018-10-22 23:19:43,622 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-10-22 23:19:43,622 [main] INFO (AbstractHandlerMethodMapping.java:543)- Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-10-22 23:19:43,662 [main] INFO (AbstractUrlHandlerMapping.java:349)- Root mapping to handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+2018-10-22 23:19:43,702 [main] INFO (AbstractUrlHandlerMapping.java:362)- Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-10-22 23:19:43,712 [main] INFO (AbstractUrlHandlerMapping.java:362)- Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-10-22 23:19:43,752 [main] INFO (ExceptionHandlerExceptionResolver.java:273)- Detected @ExceptionHandler methods in controllerAdviceController
+2018-10-22 23:19:43,841 [main] INFO (AbstractUrlHandlerMapping.java:362)- Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-10-22 23:19:43,894 [main] INFO (WebMvcAutoConfiguration.java:549)- Adding welcome page: class path resource [static/index.html]
+2018-10-22 23:19:44,754 [main] INFO (MBeanExporter.java:431)- Registering beans for JMX exposure on startup
+2018-10-22 23:19:44,764 [main] INFO (MBeanExporter.java:916)- Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-10-22 23:19:44,774 [main] INFO (MBeanExporter.java:916)- Bean with name 'rabbitConnectionFactory' has been autodetected for JMX exposure
+2018-10-22 23:19:44,784 [main] INFO (MBeanExporter.java:671)- Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+2018-10-22 23:19:44,784 [main] INFO (MBeanExporter.java:678)- Located managed bean 'rabbitConnectionFactory': registering with JMX server as MBean [org.springframework.amqp.rabbit.connection:name=rabbitConnectionFactory,type=CachingConnectionFactory]
+2018-10-22 23:19:44,824 [main] INFO (DefaultLifecycleProcessor.java:343)- Starting beans in phase -2147482648
+2018-10-22 23:19:44,824 [main] INFO (DefaultLifecycleProcessor.java:343)- Starting beans in phase 2147483647
+2018-10-22 23:19:44,924 [main] INFO (TomcatEmbeddedServletContainer.java:201)- Tomcat started on port(s): 8080 (http)
+2018-10-22 23:19:44,934 [main] INFO (StartupInfoLogger.java:57)- Started Application in 10.584 seconds (JVM running for 19.47)
+2018-10-22 23:19:44,934 [main] INFO (Application.java:17)- 启动完毕...

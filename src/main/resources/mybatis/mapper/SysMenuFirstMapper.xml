@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.demo.mapper.SysMenuFirstMapper">
+
+	<resultMap type="com.example.demo.pojo.vo.SysMenuFirst" id="SysMenuFirstMap">
+		<id column="smf_id" property="id" javaType="String"/>
+		<result column="smf_create_time" property="createTime" javaType="java.util.Date"/>
+		<result column="smf_update_time" property="updateTime" javaType="java.util.Date"/>
+		<result column="smf_name" property="name" javaType="String"/>
+		<result column="smf_order" property="order" javaType="Integer"/>
+		<collection property="sysMenuSecondList" ofType="com.example.demo.pojo.vo.SysMenuSecond">
+			<id column="sms_id" property="id" javaType="String"/>
+			<result column="sms_create_time" property="createTime" javaType="java.util.Date"/>
+			<result column="sms_update_time" property="updateTime" javaType="java.util.Date"/>
+			<result column="sms_name" property="name" javaType="String"/>
+			<result column="sms_order" property="order" javaType="Integer"/>
+			<result column="sms_url" property="url" javaType="String"/>
+			<result column="sms_sys_menu_first_id" property="sysMenuFirstId" javaType="String"/>
+		</collection>
+	</resultMap>
+
+	<select id="selectAll" resultMap="SysMenuFirstMap">
+	
+		SELECT
+			smf.id AS smf_id,
+			smf.create_time AS smf_create_time,
+			smf.update_time AS smf_update_time,
+			smf.`name` AS smf_name,
+			smf.`order` AS smf_order,
+			sms.id AS sms_id,
+			sms.create_time AS sms_create_time,
+			sms.update_time AS sms_update_time,
+			sms.`name` AS sms_name,
+			sms.`order` AS sms_order,
+			sms.url AS sms_url,
+			sms.sys_menu_first_id AS sms_sys_menu_first_id
+		FROM
+			sys_menu_first AS smf
+		LEFT JOIN sys_menu_second AS sms ON smf.id = sms.sys_menu_first_id
+		ORDER BY
+			smf.`order` ASC,
+			sms.`order` ASC
+	
+	</select>
+	
+	<insert id="create">
+	
+	INSERT INTO sys_menu_first (
+		id,
+		create_time,
+		update_time,
+		`name`,
+		`order`
+	)
+	VALUES
+		(
+		#{id},
+		CURRENT_TIMESTAMP (),
+		CURRENT_TIMESTAMP (),
+		#{name},
+		#{order}
+		)
+	
+	</insert>
+	
+	<update id="update">
+	
+		UPDATE sys_menu_first
+		<set>
+			<if test="name!=null">name = #{name},</if>
+			<if test="order!=null">order = #{order},</if>
+			update_time = CURRENT_TIMESTAMP ()
+		</set>
+		WHERE
+			id = #{id}
+	
+	</update>
+	
+	<delete id="delete">
+	
+		DELETE FROM sys_menu_first WHERE id = #{id}
+		
+	</delete>
+
+</mapper>

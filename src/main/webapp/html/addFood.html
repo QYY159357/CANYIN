@@ -1,0 +1,382 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Amaze UI Admin index Examples</title>
+    <meta name="description" content="这是一个 index 页面">
+    <meta name="keywords" content="index">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <link rel="icon" type="image/png" href="assets/i/favicon.png">
+    <link rel="apple-touch-icon-precomposed" href="assets/i/app-icon72x72@2x.png">
+    <meta name="apple-mobile-web-app-title" content="Amaze UI" />
+    <link rel="stylesheet" href="assets/css/amazeui.min.css" />
+    <link rel="stylesheet" href="assets/css/admin.css">
+    <link rel="stylesheet" href="assets/css/app.css">
+</head>
+
+<body data-type="generalComponents">
+
+
+    <header class="am-topbar am-topbar-inverse admin-header">
+        <div class="am-topbar-brand">
+            <a href="javascript:;" class="tpl-logo">
+                <img src="assets/img/logo.png" alt="">
+            </a>
+        </div>
+        <div class="am-icon-list tpl-header-nav-hover-ico am-fl am-margin-right">
+
+        </div>
+
+        <button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-success am-show-sm-only" data-am-collapse="{target: '#topbar-collapse'}">
+            <span class="am-sr-only">导航切换</span>
+            <span class="am-icon-bars"></span>
+        </button>
+
+        <div class="am-collapse am-topbar-collapse" id="topbar-collapse">
+
+        </div>
+    </header>
+
+    <div id="app" v-cloak class="tpl-page-container tpl-page-header-fixed">
+        <div class="tpl-left-nav tpl-left-nav-hover">
+            <div class="tpl-left-nav-title">
+            </div>
+            <div class="tpl-left-nav-list">
+                <ul class="tpl-left-nav-menu">
+                    <li class="tpl-left-nav-item" v-for="item in menuList">
+                        <!-- 打开状态 a 标签添加 active 即可   -->
+                        <a href="javascript:;" class="nav-link tpl-left-nav-link-list ">
+                            <i class="am-icon-table"></i>
+                            <span>{{item.name}}</span>
+                            <!-- 列表打开状态的i标签添加 tpl-left-nav-more-ico-rotate 图表即90°旋转  -->
+                            <i class="am-icon-angle-right tpl-left-nav-more-ico am-fr am-margin-right"></i>
+                        </a>
+                        <ul class="tpl-left-nav-sub-menu" style="display: block;">
+                            <li>
+                                <a :href="item.url" v-for="item in item.sysMenuSecondList">
+                                    <i class="am-icon-angle-right"></i>
+                                    <span>{{item.name}}</span>
+                                    <i class="pl-left-nav-content-ico am-fr am-margin-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="tpl-content-wrapper">
+            <div class="tpl-portlet-components">
+                <div class="portlet-title">
+                    <div class="caption font-green bold">
+                        <span class="am-icon-code"></span>添加菜品
+                    </div>
+                </div>
+                <div class="tpl-block">
+
+                    <div class="am-gtpl-amazeui-form">
+
+
+                        <div class="am-u-sm-12am-u-md-9">
+                            <form class="am-form am-form-horizontal">
+
+                                <div class="am-form-group">
+                                    <label class="am-u-sm-3 am-form-label">菜品名</label>
+                                    <div class="am-u-sm-6" style="float:left;">
+                                        <input v-model="food.name" type="text" placeholder="输入菜品名">
+                                    </div>
+                                </div>
+
+                                <div class="am-form-group">
+                                    <label class="am-u-sm-3 am-form-label">菜品分类</label>
+                                    <div class="am-u-sm-6" style="float:left;">
+                                        <select v-model="food.menuClassifyId">
+                                            <option v-for="item in classifyList" :value="item.id">{{item.name}}</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                
+                                <div class="am-form-group">
+                                    <label class="am-u-sm-3 am-form-label">是否隐藏</label>
+                                    <div class="am-u-sm-6" style="float:left;">
+                                        <select v-model="food.ishide">
+                                            <option value="1">是</option>
+                                            <option value="0">否</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="am-form-group">
+                                    <label class="am-u-sm-3 am-form-label">排序</label>
+                                    <div class="am-u-sm-6" style="float:left;">
+                                        <input v-model="food.order" type="number" placeholder="1，2，3...">
+                                        <small>排序，默认按升序排序</small>
+                                    </div>
+                                </div>
+
+                                <div class="am-form-group">
+                                    <label class="am-u-sm-3 am-form-label">菜品图片</label>
+                                    <div class="am-u-sm-9" style="float:left;">
+                                        <div class="am-form-group am-form-file">
+                                            <div class="tpl-form-file-img">
+                                                <img v-bind:src="food.image" alt="">
+                                            </div>
+                                            <button type="button" class="am-btn am-btn-danger am-btn-sm">
+                                                <i class="am-icon-cloud-upload"></i>添加菜品图片</button>
+                                            <input onchange="uploadimg()" id="doc-form-file" type="file" multiple>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="am-form-group">
+                                    <label class="am-u-sm-3 am-form-label">单价</label>
+                                    <div class="am-u-sm-6" style="float:left;">
+                                        <input v-model="food.price" type="number" placeholder="请输入单价，单位为元（0.00）">
+                                    </div>
+                                </div>
+
+                                <div class="am-form-group">
+                                    <label class="am-u-sm-3 am-form-label">库存</label>
+                                    <div class="am-u-sm-6" style="float:left;">
+                                        <input v-model="food.stock" type="number" placeholder="请输入菜品的库存量">
+                                    </div>
+                                </div>
+
+                                <div class="am-form-group">
+                                    <label class="am-u-sm-3 am-form-label">重量</label>
+                                    <div class="am-u-sm-6" style="float:left;">
+                                        <div class="am-form-group" v-for="item in food.weight">
+                                            <div>
+                                                <input v-model="item.weight" type="text" placeholder="规格-重量">
+                                            </div>
+                                            <div>
+                                                <input v-model="item.price" type="number" placeholder="规格-价格">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="am-form-group">
+                                        <div class="am-u-sm-9 am-u-sm-push-3">
+                                            <button v-on:click="addLineWeight" type="button" class="am-btn am-btn-success">添加一行</button>
+                                            <button :disabled="!(food.weight.length > 0)" v-on:click="minusLineWeight"
+                                                type="button" class="am-btn am-btn-danger">删除一行</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="am-form-group">
+                                    <label class="am-u-sm-3 am-form-label">口味</label>
+                                    <div class="am-u-sm-6" style="float:left;">
+                                        <div class="am-form-group" v-for="item in food.taste">
+                                            <input v-model="item.name" type="text" placeholder="规格-口味">
+                                        </div>
+                                    </div>
+                                    <div class="am-form-group">
+                                        <div class="am-u-sm-9 am-u-sm-push-3">
+                                            <button v-on:click="addLineTaste" type="button" class="am-btn am-btn-success">添加一行</button>
+                                            <button :disabled="!(food.taste.length > 0)" v-on:click="minusLineTaste"
+                                                type="button" class="am-btn am-btn-danger">删除一行</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="am-form-group">
+                                    <label class="am-u-sm-3 am-form-label">做法</label>
+                                    <div class="am-u-sm-6" style="float:left;">
+                                        <div class="am-form-group" v-for="item in food.practice">
+                                            <input v-model="item.name" type="text" placeholder="规格-做法">
+                                        </div>
+                                    </div>
+                                    <div class="am-form-group">
+                                        <div class="am-u-sm-9 am-u-sm-push-3">
+                                            <button v-on:click="addLinePractice" type="button" class="am-btn am-btn-success">添加一行</button>
+                                            <button :disabled="!(food.practice.length > 0)" v-on:click="minusLinePractice"
+                                                type="button" class="am-btn am-btn-danger">删除一行</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="am-form-group">
+                                    <label class="am-u-sm-3 am-form-label">简介</label>
+                                    <div class="am-u-sm-6" style="float:left;">
+                                        <textarea v-model="food.info" class="" rows="5" id="user-intro" placeholder="输入菜品简介"></textarea>
+                                    </div>
+                                </div>
+
+                                <div class="am-form-group">
+                                    <div class="am-u-sm-9 am-u-sm-push-3">
+                                        <button v-on:click="submit()" type="button" class="am-btn am-btn-primary">确认添加</button>
+                                    </div>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="assets/js/jquery.min.js"> </script>
+    <script src="assets/js/amazeui.min.js"> </script>
+    <script src="assets/js/app.js"> </script>
+    <script src="http://www.jq22.com/jquery/jquery-2.1.1.js"> </script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"> </script>
+    <script src="assets/js/common.js"></script>
+    <script>
+
+        var vue = new Vue({
+            el: '#app',
+            data: {
+                menuList: [],
+                classifyList: [],
+                food: {
+                    name: null,//菜品名
+                    image: null,//图片
+                    price: null,//单价
+                    info: null,//商品简介
+                    order: null,//排序
+                    stock: null,//y库存
+                    ishide:null,//是否隐藏
+                    taste: [],//口味
+                    tasteList: null,
+                    practice: [],//做法
+                    practiceList: null,
+                    menuClassifyId: null,
+                    weight: [],//重量
+                    weightList: null
+                }
+            },
+            methods: {
+                submit: function () {
+                    var that_food = this.food;
+                    that_food.tasteList = JSON.stringify(that_food.taste);
+                    that_food.practiceList = JSON.stringify(that_food.practice);
+                    that_food.weightList = JSON.stringify(that_food.weight);
+                    console.log(that_food);
+                    $.ajax({
+                        url: baseUrl + "/food/create",
+                        data: that_food,
+                        type: "POST",
+                        success: function (res) {
+                            console.log(res);
+                            if (res.code == 200) {
+								window.location.href = "foodList.html";
+                                alert("添加成功");
+								
+                            } else {
+                                alert(res.msg);
+                            }
+                        },
+                    })
+                },
+                addLineWeight: function () {
+                    this.food.weight.push({
+                        price: null,
+                        weight: null
+                    });
+                },
+                minusLineWeight: function () {
+                    this.food.weight.splice(this.food.weight.length - 1, 1);
+                },
+                addLineTaste: function () {
+                    this.food.taste.push({
+                        name: null
+                    });
+                },
+                minusLineTaste: function () {
+                    this.food.taste.splice(this.food.taste.length - 1, 1);
+                },
+                addLinePractice: function () {
+                    this.food.practice.push({
+                        name: null
+                    });
+                },
+                minusLinePractice: function () {
+                    this.food.practice.splice(this.food.practice.length - 1, 1);
+                }
+            }
+        })
+
+        $(document).ready(function () {
+            init();
+        });
+
+        //图片上传
+        function uploadimg() {
+            var fileObj = document.getElementById("doc-form-file").files[0];
+            var formFile = new FormData();
+            formFile.append("file", fileObj); //加入文件对象
+            var data = formFile;
+            $.ajax({
+                url: baseUrl + "/file/upload/a/multipart/file",
+                data: data,
+                type: "POST",
+                dataType: "json",
+                cache: false,//上传文件无需缓存
+                processData: false,//用于对data参数进行序列化处理 这里必须false
+                contentType: false, //必须
+                success: function (res) {
+                    console.log(res);
+                    if (res.code == 200) {
+                        vue.food.image = res.data;
+                    }
+                },
+            })
+        }
+
+        //初始化
+        function init() {
+            getMenuList();
+            getClassifyList();
+        }
+
+        //获取菜品分类列表
+        function getClassifyList() {
+            $.ajax({
+                url: baseUrl + "/menu/classify/select/all",
+                type: 'GET',
+                data: {},
+            }).done(function (res) {
+                console.log(res);
+                if (res.code == 200) {
+                    vue.classifyList = res.data;
+                } else {
+                    alert(res.msg);
+                }
+            }).fail(function (res) {
+
+            });
+        }
+
+        //获得菜单列表
+        function getMenuList() {
+            $.ajax({
+                url: baseUrl + "/sys/menu/first/select/all",
+                type: 'GET',
+                data: {},
+            }).done(function (res) {
+                console.log(res);
+                if (res.code == 200) {
+                    vue.menuList = res.data;
+                } else {
+                    alert(res.msg);
+                }
+            }).fail(function (res) {
+
+            });
+        }
+
+    </script>
+
+
+</body>
+
+</html>

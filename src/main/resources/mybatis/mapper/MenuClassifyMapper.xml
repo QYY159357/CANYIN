@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.demo.mapper.MenuClassifyMapper">
+
+	<resultMap type="com.example.demo.pojo.vo.MenuClassify"
+		id="MenuClassifyMap">
+		<id column="mc_id" property="id" javaType="String" />
+		<result column="mc_create_time" property="createTime"
+			javaType="java.util.Date" />
+		<result column="mc_update_time" property="updateTime"
+			javaType="java.util.Date" />
+		<result column="mc_name" property="name" javaType="String" />
+		<collection property="foodList"
+			ofType="com.example.demo.pojo.vo.Food">
+			<id column="f_id" property="id" javaType="String" />
+			<result column="f_create_time" property="createTime"
+				javaType="java.util.Date" />
+			<result column="f_update_time" property="updateTime"
+				javaType="java.util.Date" />
+			<result column="f_image" property="image" javaType="String" />
+			<result column="f_name" property="name" javaType="String" />
+			<result column="f_price" property="price" javaType="Double" />
+			<result column="f_info" property="info" javaType="String" />
+			<result column="f_practiceList" property="practiceList"
+				javaType="String" />
+			<result column="f_tasteList" property="tasteList"
+				javaType="String" />
+			<result column="f_weightList" property="weightList"
+				javaType="String" />
+		</collection>
+	</resultMap>
+
+	<select id="selectAll" resultMap="MenuClassifyMap">
+
+		SELECT
+		mc.id AS mc_id,
+		mc.create_time AS mc_create_time,
+		mc.update_time AS mc_update_time,
+		mc.`name` AS mc_name,
+		mc.`order` AS mc_order,
+		f.id AS f_id,
+		f.create_time AS f_create_time,
+		f.update_time AS f_update_time,
+		f.image
+		AS f_image,
+		f.`name` AS f_name,
+		f.price AS f_price,
+		f.info AS f_info,
+		f.menu_classify_id AS f_menu_classify_id,
+		f.`order` AS f_order,
+		f.practice_list AS f_practiceList,
+		f.taste_list AS f_tasteList,
+		f.weight_list AS f_weightList
+		FROM
+		menu_classify AS mc
+		LEFT JOIN food AS
+		f ON
+		mc.id =
+		f.menu_classify_id
+		ORDER BY mc.`order` ASC ,mc.create_time DESC, f.`order` ASC, f.create_time
+
+	</select>
+
+	<select id="selectAllForSys"
+		resultType="com.example.demo.pojo.vo.MenuClassify">
+
+		SELECT * FROM menu_classify ORDER BY `order` ASC
+		,create_time DESC LIMIT
+		#{currentPage},#{pageSize}
+
+	</select>
+
+	<select id="selectMaxSize" resultType="Integer">
+
+		SELECT COUNT(id) FROM menu_classify
+
+	</select>
+
+	<select id="selectOneById"
+		resultType="com.example.demo.pojo.vo.MenuClassify">
+
+		SELECT * FROM menu_classify WHERE id = #{id}
+
+	</select>
+
+	<insert id="create">
+
+		INSERT INTO menu_classify (
+		id,
+		create_time,
+		update_time,
+		`name`,
+		`order`
+		)
+		VALUES
+		(
+		#{id},
+		CURRENT_TIMESTAMP (),
+		CURRENT_TIMESTAMP (),
+		#{name},
+		#{order}
+		)
+		ON DUPLICATE KEY UPDATE
+		update_time = CURRENT_TIMESTAMP ()
+
+	</insert>
+
+	<update id="update">
+
+		UPDATE menu_classify
+		<set>
+			<if test="name!=null">name = #{name},</if>
+			<if test="order!=null">`order` = #{order},</if>
+			update_time = CURRENT_TIMESTAMP ()
+		</set>
+		WHERE
+		id = #{id}
+
+	</update>
+
+	<delete id="delete">
+
+		DELETE FROM menu_classify WHERE id = #{id}
+
+	</delete>
+
+</mapper>

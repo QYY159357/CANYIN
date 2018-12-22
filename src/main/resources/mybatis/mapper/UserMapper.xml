@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.demo.mapper.UserMapper">
+
+	<insert id="create">
+
+		INSERT INTO user_wei_xin (
+		id,
+		create_time,
+		update_time,
+		openid,
+		nick_name,
+		sex,
+		avatar_url
+		)
+		VALUES
+		(
+		#{id},
+		CURRENT_TIMESTAMP (),
+		CURRENT_TIMESTAMP (),
+		#{openid},
+		#{nickName},
+		#{gender},
+		#{avatarUrl}
+		) ON DUPLICATE KEY UPDATE
+		update_time =
+		CURRENT_TIMESTAMP ()
+
+	</insert>
+
+	<select id="selectById" resultType="com.example.demo.pojo.vo.User">
+
+		SELECT * FROM user_wei_xin WHERE id = #{id}
+
+	</select>
+
+	<select id="selectAll" resultType="com.example.demo.pojo.vo.User">
+
+		SELECT * FROM user_wei_xin ORDER BY create_time DESC LIMIT
+		#{currentPage},#{pageSize}
+
+	</select>
+
+	<select id="selectMaxSize" resultType="Integer">
+
+		SELECT COUNT(id) FROM user_wei_xin
+
+	</select>
+
+	<update id="update">
+
+		UPDATE user_wei_xin
+		<set>
+			<if test="nickName!=null">nickName = #{nickName},</if>
+			<if test="gender!=null">gender = #{gender},</if>
+			<if test="avatarUrl!=null">avatarUrl = #{avatarUrl},</if>
+			<if test="phone!=null">phone = #{phone},</if>
+			update_time = CURRENT_TIMESTAMP ()		
+		</set>
+		WHERE id = #{id}
+
+	</update>
+
+</mapper>

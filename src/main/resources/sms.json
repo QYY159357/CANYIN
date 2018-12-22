@@ -1,0 +1,30 @@
+{
+	"changePhone":{
+		"smsSingleSenderParams":{
+			"nationCode":"86",
+			"templateId":"201330",
+			"sign":"豪欢科技",
+			"extend":"",
+			"ext":""
+		},
+		"timeConfig":{
+			"length":5,
+			"timeOut":5,
+			"countDown":60
+		}
+	},
+	"business2":{
+		"smsSingleSenderParams":{
+			"nationCode":"86",
+			"templateId":"201330",
+			"sign":"豪欢科技",
+			"extend":"",
+			"ext":""
+		},
+		"timeConfig":{
+			"length":5,
+			"timeOut":5,
+			"countDown":60
+		}
+	}
+}

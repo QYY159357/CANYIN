@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.demo.mapper.CustomerMapper">
+	
+	
+	<select id="selectCusmByPhone" resultType="com.example.demo.pojo.vo.Customer">
+		SELECT * FROM
+		user_wei_xin
+		WHERE phone = #{phone}
+	</select>
+
+	<select id="selectAllCustomer" resultType="com.example.demo.pojo.vo.Customer">
+		SELECT *
+		FROM user_wei_xin
+		ORDER BY id ASC,create_time DESC
+		LIMIT #{currentPage}, #{pageSize}
+	</select>
+
+	<select id="selectMaxSize" resultType="Integer">
+	
+		SELECT COUNT(openid) FROM user_wei_xin
+	
+	</select>
+	
+	<update id="updateCusmStatue">
+		UPDATE user_wei_xin set
+			update_time = CURRENT_TIMESTAMP(), 
+			<if test="status == 0">activation_time = '',</if>
+			<if test="status == 1">activation_time = DATE_FORMAT(NOW(), '%Y-%m-%d %H:%i:%S'),</if>
+			status = #{status}		
+		 WHERE openid = #{id}
+	</update>
+
+</mapper>
