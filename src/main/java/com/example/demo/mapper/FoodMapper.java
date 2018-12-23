@@ -13,7 +13,7 @@ public interface FoodMapper {
 	public Boolean create(@Param("id") String id, @Param("name") String name, @Param("image") String image,
 			@Param("price") Double price, @Param("info") String info, @Param("menuClassifyId") String menuClassifyId,
 			@Param("order") Integer order, @Param("stock") Integer stock, @Param("weightList") String weightList,
-			@Param("tasteList") String tasteList, @Param("practiceList") String practiceList,@Param("ishide") Integer ishide);
+			@Param("tasteList") String tasteList, @Param("practiceList") String practiceList,@Param("ishide") Integer ishide,String salesMode);
 
 	public Boolean update(@Param("id") String id, @Param("name") String name, @Param("image") String image,
 			@Param("price") Double price, @Param("info") String info, @Param("menuClassifyId") String menuClassifyId,

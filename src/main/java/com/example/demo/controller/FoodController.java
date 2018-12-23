@@ -92,7 +92,9 @@ public class FoodController {
 			
 			@Min(value = 0, message = "请选择是否隐藏菜品！") 
 			@RequestParam(required = true) String ishide,
-
+			
+			@Min(value = 0, message = "请选择售卖方式！") 
+			@RequestParam(required = true) String salesMode,
 			
 			@Min(value = 0, message = "排序不能小于{value}") 
 			@RequestParam(required = false, defaultValue = "0") Integer order,
@@ -109,7 +111,7 @@ public class FoodController {
 			@CheckJson(isCollection = true, message = "规格-做法不是正确的格式") 
 			@RequestParam(required = true) String practiceList) {
 		return foodService.create(name, image, price, info, menuClassifyId, order, stock, weightList, tasteList,
-				practiceList,Integer.parseInt(ishide));
+				practiceList,Integer.parseInt(ishide),salesMode);
 	}
 
 	@ResponseBody

@@ -7,7 +7,7 @@ public interface FoodService {
 	public ResultMap selectAll();
 
 	public ResultMap create(String name, String image, Double price, String info, String menuClassifyId, Integer order,
-			Integer stock, String weightList, String tasteList, String practiceList,Integer ishide);
+			Integer stock, String weightList, String tasteList, String practiceList,Integer ishide,String salesMode);
 
 	public ResultMap update(String id, String name, String image, Double price, String info, String menuClassifyId,
 			Integer order, Integer stock, String weightList, String tasteList, String practiceList);
