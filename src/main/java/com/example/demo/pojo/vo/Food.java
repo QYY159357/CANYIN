@@ -65,6 +65,8 @@ public class Food implements Serializable {
 	private List<String> practice = new ArrayList<String>();
 	
 	private Integer ishide;
+	
+	private String salesMode;
 
 	public Food() {
 		// TODO Auto-generated constructor stub
@@ -155,7 +157,13 @@ public class Food implements Serializable {
 	public void setPracticeList(String practiceList) {
 		this.practiceList = practiceList;
 	}
-
+	
+	public String getSalesMode() {
+		return salesMode;
+	}
+	public void setSalesMode(String salesMode) {
+		this.salesMode = salesMode;
+	}
 	public List<Map<String, Weight>> getWeight() {
 		if (this.weightList == null || "".equals(this.weightList)) {
 			return weight;
@@ -343,7 +351,7 @@ class Weight implements Serializable {
 	public void setPrice(Double price) {
 		this.price = price;
 	}
-
+	
 }
 
 class Taste implements Serializable {
@@ -363,7 +371,7 @@ class Taste implements Serializable {
 	public void setName(String name) {
 		this.name = name;
 	}
-
+	
 }
 
 class Practice implements Serializable {

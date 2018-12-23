@@ -46,11 +46,11 @@ public class FoodServiceImpl implements FoodService {
 
 	@Override
 	public ResultMap create(String name, String image, Double price, String info, String menuClassifyId, Integer order,
-			Integer stock, String weightList, String tasteList, String practiceList,Integer ishide) {
+			Integer stock, String weightList, String tasteList, String practiceList,Integer ishide,String salesMode) {
 		// TODO Auto-generated method stub
 		String id = Util.UUID();
 		Boolean data = foodMapper.create(id, name, image, price, info, menuClassifyId, order, stock, weightList,
-				tasteList, practiceList,ishide);
+				tasteList, practiceList,ishide,salesMode);
 		return ResultMap.newInstance().success(data);
 	}
 
