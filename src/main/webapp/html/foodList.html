@@ -133,6 +133,7 @@
                                             <th class="table-type">菜品名</th>
                                             <th class="table-type">价格(元)</th>
                                             <th class="table-type">规格</th>
+                                            <th class="table-type">售卖方式</th>
                                             <th class="table-type">菜品简价</th>
                                             <th class="table-date am-hide-sm-only">创建日期</th>
                                             <!-- <th class="table-date am-hide-sm-only">更新日期</th> -->
@@ -153,6 +154,9 @@
                                             </td>
                                             <td style="vertical-align: middle;">
                                                 <div>{{item.isNorms?"有":"无"}}</div>
+                                            </td>
+                                            <td style="vertical-align: middle;">
+                                                <div>{{item.salesMode == 0?"单只":"数量"}}</div>
                                             </td>
                                             <td style="vertical-align: middle;">{{item.info}}</td>
                                             <td class="am-hide-sm-only" style="vertical-align: middle;">{{item.createTime}}</td>

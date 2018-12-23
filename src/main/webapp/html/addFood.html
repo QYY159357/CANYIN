@@ -109,6 +109,16 @@
                                         </select>
                                     </div>
                                 </div>
+                                
+                                <div class="am-form-group">
+                                    <label class="am-u-sm-3 am-form-label">售卖方式</label>
+                                    <div class="am-u-sm-6" style="float:left;">
+                                        <select v-model="food.salesMode">
+                                            <option value="0">单只售卖</option>
+                                            <option value="1">数量售卖</option>
+                                        </select>
+                                    </div>
+                                </div>
 
                                 <div class="am-form-group">
                                     <label class="am-u-sm-3 am-form-label">排序</label>
@@ -245,6 +255,7 @@
                     order: null,//排序
                     stock: null,//y库存
                     ishide:null,//是否隐藏
+                    salesMode:null,
                     taste: [],//口味
                     tasteList: null,
                     practice: [],//做法
