@@ -270,7 +270,7 @@
 			
 		function getCustomerList(currentPage){
 			 $.ajax({
-                url: "http://localhost:8080/customer/select/all/for/cusm?currentPage="+currentPage,
+                url: baseUrl + "/customer/select/all/for/cusm?currentPage="+currentPage,
                 type: 'GET',
                 data: {},
             }).done(function (res) {
@@ -293,7 +293,7 @@
 		function getCusmByPhone(phone){
 			
 			$.ajax({
-                url: "http://localhost:8080/customer/select/one/by/phone?phone="+phone,
+                url: baseUrl + "/customer/select/one/by/phone?phone="+phone,
                 type: 'GET',
                 data: {},
             }).done(function (res) {
