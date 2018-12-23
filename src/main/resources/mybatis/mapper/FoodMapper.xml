@@ -47,7 +47,8 @@
 		weight_list,
 		taste_list,
 		practice_list,
-		ishide
+		ishide,
+		sales_Mode
 		FROM food
 		WHERE 1=1
 		<if test="classify !=''">AND menu_classify_id = #{classify}</if>
