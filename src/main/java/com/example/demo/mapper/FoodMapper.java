@@ -33,5 +33,8 @@ public interface FoodMapper {
 	public Integer selectMaxSize(@Param("classify") String classify,@Param("foodName") String foodName);
 	
 	public Integer isHideFood(@Param("id") String id,@Param("ishide") Integer ishide);
+	
+	public Integer updateFoodPrice(@Param("discount") Float discount);
+	
 
 }

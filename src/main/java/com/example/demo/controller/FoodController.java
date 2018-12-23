@@ -169,5 +169,16 @@ public class FoodController {
 		
 		return foodService.isHideFood(id,Integer.parseInt(ishide));
 	}
+	/**
+	 * 全场折扣值
+	 */
+	@ResponseBody
+	@RequestMapping(value = { "/update/price/for/all" }, method = { RequestMethod.POST })
+	public ResultMap updateFoodPrice(
+			//@Pattern(regexp = "[0-9a-z]{32}", message = "只能输入纯数据,如:8.8")
+			@RequestParam(required = true) String discountPrice) {
+		
+		return foodService.updateFoodPrice(Float.parseFloat(discountPrice));
+	}
 
 }

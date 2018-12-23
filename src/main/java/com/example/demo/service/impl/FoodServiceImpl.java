@@ -99,4 +99,10 @@ public class FoodServiceImpl implements FoodService {
 		return ResultMap.newInstance().success(result);
 	}
 
+	@Override
+	public ResultMap updateFoodPrice(Float discountPrice) {
+		Integer result = foodMapper.updateFoodPrice(discountPrice);
+		return ResultMap.newInstance().success(result);
+	}
+
 }

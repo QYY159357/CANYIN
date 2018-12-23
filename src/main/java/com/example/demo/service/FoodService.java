@@ -19,5 +19,7 @@ public interface FoodService {
 	public ResultMap selectOneById(String id);
 	
 	public ResultMap isHideFood(String id,Integer ishide);
+	
+	public ResultMap updateFoodPrice(Float discountPrice);
 
 }

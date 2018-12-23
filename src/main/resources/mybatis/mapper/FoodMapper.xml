@@ -15,7 +15,8 @@
 		`order`,
 		weight_list,
 		taste_list,
-		practice_list
+		practice_list,
+		discount
 		FROM
 		food
 		ORDER BY `order` ASC,
@@ -48,11 +49,12 @@
 		taste_list,
 		practice_list,
 		ishide,
-		sales_Mode
+		sales_Mode,
+		discount
 		FROM food
 		WHERE 1=1
-		<if test="classify !=''">AND menu_classify_id = #{classify}</if>
-		<if test="foodName !=''">AND name like "%"#{foodName}"%"</if>
+		<if test="classify !='' and classify!=null">AND menu_classify_id = #{classify}</if>
+		<if test="foodName !='' and foodName!=null">AND name like "%"#{foodName}"%"</if>
 		ORDER BY `order` ASC,
 		create_time DESC
 		LIMIT #{currentPage}, #{pageSize}
@@ -140,7 +142,8 @@
 		taste_list,
 		practice_list
 		FROM
-		food
+		food,
+		discount
 		WHERE
 		id = #{id}
 
@@ -149,11 +152,16 @@
 	<select id="selectMaxSize" resultType="Integer">
 	
 		SELECT COUNT(id) FROM food where 1=1 
-		<if test="classify !=''">AND menu_classify_id = #{classify}</if>
-		<if test="foodName !=''">AND name = #{foodName}</if>
+		<if test="classify !='' and classify!=null">AND menu_classify_id = #{classify}</if>
+		<if test="foodName !='' and foodName!=null">AND name = #{foodName}</if>
 	</select>
 	
 	<update id="isHideFood">
 		UPDATE food SET ishide = #{ishide} WHERE id = #{id}
 	</update>
+	
+	<update id="updateFoodPrice">
+		UPDATE food SET discount = #{discount} WHERE 1=1
+	</update>
+	
 </mapper>

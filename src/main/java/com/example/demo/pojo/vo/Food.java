@@ -67,7 +67,8 @@ public class Food implements Serializable {
 	private Integer ishide;
 	
 	private String salesMode;
-
+	
+	private Float discount;
 	public Food() {
 		// TODO Auto-generated constructor stub
 	}
@@ -163,6 +164,13 @@ public class Food implements Serializable {
 	}
 	public void setSalesMode(String salesMode) {
 		this.salesMode = salesMode;
+	}
+	
+	public Float getDiscount() {
+		return discount;
+	}
+	public void setDiscount(Float discount) {
+		this.discount = discount;
 	}
 	public List<Map<String, Weight>> getWeight() {
 		if (this.weightList == null || "".equals(this.weightList)) {

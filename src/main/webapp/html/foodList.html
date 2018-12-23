@@ -83,13 +83,17 @@
                             <div class="am-btn-toolbar">
                                 <div class="am-btn-group am-btn-group-xs">
                                     <button onclick="javascript:window.location.href='addFood.html'" type="button" class="am-btn am-btn-default am-btn-success"><span
-                                            class="am-icon-plus"> 新增 </button>
-                                    <!-- <button type="button" class="am-btn am-btn-default am-btn-secondary"><span class="am-icon-save"></span>
+                                            class="am-icon-plus"> 新增 菜品</button>
+                                 <!--    <button type="button" class="am-btn am-btn-default am-btn-secondary"><span class="am-icon-save"></span>
                                             保存</button>
                                         <button type="button" class="am-btn am-btn-default am-btn-warning"><span class="am-icon-archive"></span>
                                             审核</button>
                                         <button type="button" class="am-btn am-btn-default am-btn-danger"><span class="am-icon-trash-o"></span>
                                             删除</button> -->
+                                              <button v-if="foodList[0].discount == 1"  @click="discount(foodList[0].discount)" type="button" class="am-btn am-btn-default am-btn-warning"><span class="am-icon-archive"></span>
+                                            开启全场8.8折</button>
+                                              <button v-if="foodList[0].discount  != 1"  @click="discount(foodList[0].discount)" type="button" class="am-btn am-btn-default am-btn-warning"><span class="am-icon-archive"></span>
+                                            关闭全场8.8折</button>
                                 </div>
                             </div>
                         </div>
@@ -251,11 +255,14 @@
                 	showOrHide(id,ishide);
                 },
                 changeClassify: function(value){
-                	debugger;
+                	
                 	changeClassify(value);
                 },
                 queryFoods :function(){
                 	queryFoods();
+                },
+                discount: function(price){
+                	 discount(price);
                 }
                 
                 
@@ -409,6 +416,37 @@
         	console.log("classify="+classify);
         	getFoodList(1,classify,foodname);
         		
+        }
+        function discount(disPrice){
+        	debugger;
+        	if(disPrice < 1){
+        		disPrice = "1.0";
+        	}else{
+        		disPrice = "0.88";
+        	}
+        	$.ajax({
+                url: baseUrl + "/food/update/price/for/all",
+                type: 'POST',
+                data: {
+                	discountPrice: disPrice
+                },
+            }).done(function (res) {
+                console.log(res);
+                if (res.code == 200) {
+                    //刷新
+                    getFoodList(vue.limitPage.currentPage);
+                    if(discount < 1){
+                    	alert("已关闭全场8.8折!");
+                    }else{
+                    	alert("已启用全场8.8折!");
+                    }
+                    
+                } else {
+                    alert(res.msg);
+                }
+            }).fail(function (res) {
+
+            });
         }
         
         
