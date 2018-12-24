@@ -154,7 +154,7 @@
                                            		 <div class="caption font-black bold">{{item.name}}</div>
                                             </td>
                                             <td style="vertical-align: middle;">
-                                                <div class="caption font-red bold">{{item.price}}</div>
+                                                <div class="caption font-red bold">{{checkNum(item.price * item.discount)}}</div>
                                             </td>
                                             <td style="vertical-align: middle;">
                                                 <div>{{item.isNorms?"有":"无"}}</div>
@@ -249,7 +249,7 @@
                     deleteOneById(id);
                 },
                 getFoodList: function (currentPage) {
-                    getFoodList(currentPage,classify,foodName);
+                    getFoodList(currentPage,"","");
                 },
                 showOrHide: function(id,ishide){
                 	showOrHide(id,ishide);
@@ -263,6 +263,9 @@
                 },
                 discount: function(price){
                 	 discount(price);
+                },
+                checkNum:function(num){
+                	return num.toFixed(2); 
                 }
                 
                 
@@ -418,7 +421,6 @@
         		
         }
         function discount(disPrice){
-        	debugger;
         	if(disPrice < 1){
         		disPrice = "1.0";
         	}else{
@@ -435,10 +437,10 @@
                 if (res.code == 200) {
                     //刷新
                     getFoodList(vue.limitPage.currentPage);
-                    if(discount < 1){
-                    	alert("已关闭全场8.8折!");
-                    }else{
+                    if(disPrice < 1){
                     	alert("已启用全场8.8折!");
+                    }else{
+                    	alert("已关闭全场8.8折!");
                     }
                     
                 } else {

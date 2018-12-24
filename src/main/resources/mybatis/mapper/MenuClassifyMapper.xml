@@ -27,6 +27,9 @@
 				javaType="String" />
 			<result column="f_weightList" property="weightList"
 				javaType="String" />
+			<result column="ishide" property="ishide" javaType="Integer" />
+			<result column="discount" property="discount" javaType="Float" />
+			<result column="salesMode" property="salesMode" javaType="String" />
 		</collection>
 	</resultMap>
 
@@ -50,13 +53,17 @@
 		f.`order` AS f_order,
 		f.practice_list AS f_practiceList,
 		f.taste_list AS f_tasteList,
-		f.weight_list AS f_weightList
+		f.weight_list AS f_weightList,
+		f.ishide,
+		f.discount,
+		f.sales_Mode AS salesMode
 		FROM
 		menu_classify AS mc
 		LEFT JOIN food AS
 		f ON
 		mc.id =
 		f.menu_classify_id
+		where f.ishide != 1
 		ORDER BY mc.`order` ASC ,mc.create_time DESC, f.`order` ASC, f.create_time
 
 	</select>
