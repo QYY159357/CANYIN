@@ -85,5 +85,7 @@ public class MenuClassifyController {
 			@RequestParam(required = true) String id) {
 		return menuClassifyService.delete(id);
 	}
+	
+	
 
 }

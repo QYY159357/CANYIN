@@ -104,5 +104,11 @@ public class FoodServiceImpl implements FoodService {
 		Integer result = foodMapper.updateFoodPrice(discountPrice);
 		return ResultMap.newInstance().success(result);
 	}
+	@Override
+	public ResultMap queryFoodPrice() {
+		Float result = foodMapper.queryFoodPrice();
+		return ResultMap.newInstance().success(result);
+	}
+	
 
 }

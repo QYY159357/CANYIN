@@ -15,4 +15,6 @@ public interface OrderFormService {
 
 	public ResultMap update(String id, Integer status);
 
+	public ResultMap printingOrderInfo(String id);
+
 }

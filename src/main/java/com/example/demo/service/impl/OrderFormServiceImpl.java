@@ -1,6 +1,7 @@
 package com.example.demo.service.impl;
 
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -9,8 +10,10 @@ import javax.servlet.http.HttpServletRequest;
 import org.apache.commons.codec.digest.DigestUtils;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
+import com.example.demo.config.bean.SendOrderInfo;
 import com.example.demo.config.bean.entity.ResultMap;
 import com.example.demo.exception.CommonException;
 import com.example.demo.mapper.FoodMapper;
@@ -23,6 +26,7 @@ import com.example.demo.pojo.po.Weight;
 import com.example.demo.pojo.vo.Food;
 import com.example.demo.pojo.vo.LimitPage;
 import com.example.demo.pojo.vo.OrderForm;
+import com.example.demo.pojo.vo.OrderFormInfo;
 import com.example.demo.service.OrderFormService;
 import com.example.demo.util.Util;
 import com.github.wxpay.sdk.WXPay;
@@ -55,6 +59,12 @@ public class OrderFormServiceImpl implements OrderFormService {
 
 	@Autowired
 	private HttpServletRequest request;
+
+	@Autowired
+	private SendOrderInfo sendOrderInfo;
+	
+	@Value("${printerName}")
+	private String printerName;
 
 	@SuppressWarnings("unused")
 	@Override
@@ -202,11 +212,17 @@ public class OrderFormServiceImpl implements OrderFormService {
 			priceTotal += orderFormInfoPo.getPrice() * orderFormInfoPo.getAmount() * 100;
 			continue;
 		}
-
+		Float dis = foodMapper.queryFoodPrice();
+		
+		if(dis == null || dis == 0){
+			dis = (float) 1.0;
+		}
+		priceTotal = priceTotal * dis;
+		priceTotal = Double.parseDouble(new java.text.DecimalFormat("#.00").format(priceTotal));
 		// 校验商品总价
 		if (!(priceTotal).equals(orderFormPo.getPriceTotal() * 100)) {
 			logger.info("后台计算总价：" + priceTotal);
-			logger.info("前台计算总价：" + orderFormPo.getPriceTotal());
+			logger.info("前台计算总价：" + orderFormPo.getPriceTotal() * 100);
 			throw new CommonException(ResultMap.newInstance().fail(10003, "商品总价被修改"));
 		}
 
@@ -274,6 +290,8 @@ public class OrderFormServiceImpl implements OrderFormService {
 				// 处理业务
 				// 将订单设置为已处理,库存-1,销量+1
 				orderFormMapper.update(DigestUtils.md5Hex(out_trade_no), 1);
+				// 打印票据
+				printing(orderFormMapper.selectOneById(DigestUtils.md5Hex(out_trade_no)));
 			}
 
 		} catch (Exception e) {
@@ -348,5 +366,39 @@ public class OrderFormServiceImpl implements OrderFormService {
 			logger.info("删除订单列表异常"+"订单号:"+orderNos+" 异常："+e.getMessage());
 		}
 	}
-	//end by qinyanyu 判断订单是否存在，是则删除已存在订单并生成新的订单
-}	
+	// end by qinyanyu 判断订单是否存在，是则删除已存在订单并生成新的订单
+
+	/**
+	 * 调用打印机打印
+	 */
+	@Override
+	public ResultMap printingOrderInfo(String id) {
+		// TODO Auto-generated method stub
+		// 查询订单信息。
+		OrderForm data = orderFormMapper.selectOneById(id);
+		printing(data);
+		return ResultMap.newInstance().success(true);
+	}
+
+	private void printing(OrderForm data) {
+		
+		Map<String, String> i = new LinkedHashMap<String, String>();
+		List<OrderFormInfo> list = data.getOrderFormInfoList();
+		
+		logger.info("订单信息:{}" + Util.toJson(data));
+		i.put("订单号:", data.getOrderNo());
+		i.put("座位号:", data.getSeat());
+		for (OrderFormInfo orderFormInfo : list) {
+			String orderInfo = "	x "+ orderFormInfo.getAmount() +"	"+orderFormInfo.getPrice();
+			i.put(orderFormInfo.getName(), orderInfo);
+		}
+		i.put("订单总价:", data.getPriceTotal().toString());
+		i.put("订单状态:", data.getSeat());
+		i.put("支付方式:", data.getCostWay());
+		i.put("备注:", data.getRemarks());
+		i.put("下单时间:", data.getCreateTime().toString());
+		i.put("printerName", printerName);//这里设置打印机的名字。
+		sendOrderInfo.send(i);
+	}
+
+}

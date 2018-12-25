@@ -140,10 +140,10 @@
 		`order`,
 		weight_list,
 		taste_list,
-		practice_list
-		FROM
-		food,
+		practice_list,
 		discount
+		FROM
+		food
 		WHERE
 		id = #{id}
 
@@ -163,5 +163,9 @@
 	<update id="updateFoodPrice">
 		UPDATE food SET discount = #{discount} WHERE 1=1
 	</update>
+	
+	<select id="queryFoodPrice" resultType="Float">
+		 select discount from food limit 1  
+	</select>
 	
 </mapper>

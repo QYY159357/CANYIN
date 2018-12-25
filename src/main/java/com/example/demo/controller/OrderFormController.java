@@ -83,4 +83,13 @@ public class OrderFormController {
 		return orderFormService.update(id, status);
 	}
 
-}
+	@ResponseBody
+	@RequestMapping(value = "/printing/order/info", method = { RequestMethod.POST })
+	public ResultMap printingOrderInfo(
+			@Pattern(regexp = "[0-9a-z]{32}", message = "订单ID格式不正确")
+			@RequestParam(required = true) String id) {
+		return orderFormService.printingOrderInfo(id);
+	}
+	
+	
+	}

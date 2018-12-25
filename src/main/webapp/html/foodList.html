@@ -91,9 +91,9 @@
                                         <button type="button" class="am-btn am-btn-default am-btn-danger"><span class="am-icon-trash-o"></span>
                                             删除</button> -->
                                               <button v-if="foodList[0].discount == 1"  @click="discount(foodList[0].discount)" type="button" class="am-btn am-btn-default am-btn-warning"><span class="am-icon-archive"></span>
-                                            开启全场8.8折</button>
+                                            开启全场8.0折</button>
                                               <button v-if="foodList[0].discount  != 1"  @click="discount(foodList[0].discount)" type="button" class="am-btn am-btn-default am-btn-warning"><span class="am-icon-archive"></span>
-                                            关闭全场8.8折</button>
+                                            关闭全场8.0折</button>
                                 </div>
                             </div>
                         </div>
@@ -424,7 +424,7 @@
         	if(disPrice < 1){
         		disPrice = "1.0";
         	}else{
-        		disPrice = "0.88";
+        		disPrice = "0.80";
         	}
         	$.ajax({
                 url: baseUrl + "/food/update/price/for/all",
@@ -438,9 +438,9 @@
                     //刷新
                     getFoodList(vue.limitPage.currentPage);
                     if(disPrice < 1){
-                    	alert("已启用全场8.8折!");
+                    	alert("已启用全场8.0折!");
                     }else{
-                    	alert("已关闭全场8.8折!");
+                    	alert("已关闭全场8.0折!");
                     }
                     
                 } else {

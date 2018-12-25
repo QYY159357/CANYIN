@@ -21,5 +21,7 @@ public interface FoodService {
 	public ResultMap isHideFood(String id,Integer ishide);
 	
 	public ResultMap updateFoodPrice(Float discountPrice);
+	
+	public ResultMap queryFoodPrice();
 
 }

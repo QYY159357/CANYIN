@@ -180,5 +180,14 @@ public class FoodController {
 		
 		return foodService.updateFoodPrice(Float.parseFloat(discountPrice));
 	}
+	/**
+	 * 全场折扣值
+	 */
+	@ResponseBody
+	@RequestMapping(value = { "/query/discountPrice" }, method = { RequestMethod.POST })
+	public ResultMap queryFoodPrice() {
+		
+		return foodService.queryFoodPrice();
+	}
 
 }

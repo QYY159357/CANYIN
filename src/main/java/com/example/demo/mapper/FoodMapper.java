@@ -36,5 +36,10 @@ public interface FoodMapper {
 	
 	public Integer updateFoodPrice(@Param("discount") Float discount);
 	
+	public Float queryFoodPrice();
+	
+	
+	
+	
 
 }
