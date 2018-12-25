@@ -142,7 +142,7 @@
                                                     <div class="am-btn-group am-btn-group-xs">
                                                         <button v-on:click="intentUpdate(item.id)" class="am-btn am-btn-default am-btn-xs am-text-secondary"><span
                                                                 class="am-icon-pencil-square-o"></span> 编辑</button>
-                                                        <button class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only"><span
+                                                        <button class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only"  v-on:click="deleteFoodType(item.id)"><span
                                                                 class="am-icon-trash-o"></span> 删除</button>
                                                     </div>
                                                 </div>
@@ -205,6 +205,9 @@
                 },
                 getClassifyMenuList: function (currentPage) {
                     getClassifyMenuList(currentPage);
+                },
+                deleteFoodType:function(id){
+                	deleteFoodType(id);
                 }
             }
         })
@@ -249,6 +252,24 @@
                 console.log(res);
                 if (res.code == 200) {
                     vue.menuList = res.data;
+                } else {
+                    alert(res.msg);
+                }
+            }).fail(function (res) {
+
+            });
+        }
+        function deleteFoodType(id){
+        	$.ajax({
+                url: baseUrl + "/menu/classify/delete?id="+id,
+                type: 'POST',
+                data: {},
+            }).done(function (res) {
+                console.log(res);
+                debugger;
+                if (res.code == 200) {
+                	getClassifyMenuList(1);
+                	alert("删除成功!");
                 } else {
                     alert(res.msg);
                 }
