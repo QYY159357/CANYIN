@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.demo.mapper.OrderFormInfoMapper">
+
+	<insert id="create">
+
+		INSERT INTO order_form_info (
+			id,
+			create_time,
+			update_time,
+			image,
+			`name`,
+			price,
+			amount,
+			food_id,
+			order_form_id,
+			weight,
+			taste,
+			practice
+		)
+		VALUES
+			(
+			#{id},
+			CURRENT_TIMESTAMP (),
+			CURRENT_TIMESTAMP (),
+			#{image},
+			#{name},
+			#{price},
+			#{amount},
+			#{foodId},
+			#{orderFormId},
+			#{weight},
+			#{taste},
+			#{practice}
+			)	
+	
+	</insert>
+	
+	<!-- add by qinyanyu 根据订单id删除详情列表 -->
+	<delete id="deleteOrderInfoById">
+	DELETE FROM order_form_info  WHERE order_form_id IN (
+		SELECT id FROM order_form WHERE id = #{orderNos}
+	)
+	</delete>
+	<!-- end by qinyanyu 根据订单id删除详情列表 --> 
+</mapper>

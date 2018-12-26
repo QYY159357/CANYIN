@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.demo.mapper.OrderFormMapper">
+
+	<insert id="create">
+
+		INSERT INTO order_form (
+		id,
+		create_time,
+		update_time,
+		seat,
+		remarks,
+		price_discount,
+		price_total,
+		phone,
+		status,
+		user_wei_xin_id,
+		order_no
+		)
+		VALUES
+		(
+		#{id},
+		CURRENT_TIMESTAMP (),
+		CURRENT_TIMESTAMP (),
+		#{seat},
+		#{remarks},
+		#{priceDiscount},
+		#{priceTotal},
+		#{phone},
+		#{status},
+		#{userWeiXinId},
+		#{orderNo}
+		)
+
+	</insert>
+
+	<resultMap type="com.example.demo.pojo.vo.OrderForm" id="OrderFormMap">
+		<id column="of_id" property="id" javaType="String" />
+		<result column="of_create_time" property="createTime" javaType="java.util.Date" />
+		<result column="of_update_time" property="updateTime" javaType="java.util.Date" />
+		<result column="of_seat" property="seat" javaType="String"/>
+		<result column="of_remarks" property="remarks" javaType="String" />
+		<result column="of_price_discount" property="priceDiscount"
+			javaType="Double" />
+		<result column="of_price_total" property="priceTotal" javaType="Double" />
+		<result column="of_phone" property="phone" javaType="String" />
+		<result column="of_status" property="status" javaType="Integer" />
+		<result column="of_order_no" property="orderNo" javaType="String" />
+		<result column="of_cost_way" property="costWay" javaType="String" />
+		<collection property="orderFormInfoList"
+			ofType="com.example.demo.pojo.vo.OrderFormInfo">
+			<id column="ofi_id" property="id" javaType="String" />
+			<result column="ofi_create_time" property="createTime"
+				javaType="java.util.Date" />
+			<result column="ofi_update_time" property="updateTime"
+				javaType="java.util.Date" />
+			<result column="ofi_image" property="image" javaType="String" />
+			<result column="ofi_name" property="name" javaType="String" />
+			<result column="ofi_price" property="price" javaType="Double" />
+			<result column="ofi_amount" property="amount" javaType="Integer" />
+			<result column="ofi_order_form_id" property="orderFormId"
+				javaType="String" />
+			<result column="ofi_weight" property="weight" javaType="String" />
+			<result column="ofi_taste" property="taste" javaType="String" />
+			<result column="ofi_practice" property="practice" javaType="String" />
+		</collection>
+	</resultMap>
+
+	<select id="selectAll" resultMap="OrderFormMap">
+
+		SELECT
+		of.id AS of_id,
+		of.create_time AS of_create_time,
+		of.update_time AS of_update_time,
+		of.seat AS of_seat,
+		of.remarks AS of_remarks,
+		of.price_discount AS of_price_discount,
+		of.price_total AS of_price_total,
+		of.phone AS of_phone,
+		of.status AS of_status,
+		of.order_no AS of_order_no,
+		of.cost_way AS of_cost_way,
+		ofi.id AS ofi_id,
+		ofi.create_time AS ofi_create_time,
+		ofi.update_time AS ofi_update_time,
+		ofi.image AS ofi_image,
+		ofi.`name` AS ofi_name,
+		ofi.price AS ofi_price,
+		ofi.amount AS ofi_amount,
+		ofi.order_form_id AS ofi_order_form_id,
+		ofi.weight AS ofi_weight,
+		ofi.taste AS ofi_taste,
+		ofi.practice AS ofi_practice
+		FROM
+		( SELECT * FROM order_form
+		WHERE 1 = 1
+		<if test="isForUser==true">
+			AND user_wei_xin_id = #{userWeiXinId}
+		</if>
+		<if test="id!=null and id!=''">
+			AND order_no = #{id}
+		</if>
+		ORDER BY create_time DESC LIMIT #{currentPage}, #{pageSize} ) AS of
+		LEFT JOIN order_form_info AS ofi ON ofi.order_form_id = of.id
+		ORDER BY of.create_time DESC,
+		ofi.create_time ASC
+
+	</select>
+
+	<select id="selectOneById" resultMap="OrderFormMap">
+
+		SELECT
+		of.id AS of_id,
+		of.create_time AS of_create_time,
+		of.update_time AS of_update_time,
+		of.seat AS of_seat,
+		of.remarks AS of_remarks,
+		of.price_discount AS of_price_discount,
+		of.price_total AS of_price_total,
+		of.phone AS of_phone,
+		of.status AS of_status,
+		of.order_no AS of_order_no,
+		ofi.id AS ofi_id,
+		ofi.create_time AS ofi_create_time,
+		ofi.update_time AS ofi_update_time,
+		ofi.image AS ofi_image,
+		ofi.`name` AS ofi_name,
+		ofi.price AS ofi_price,
+		ofi.amount AS ofi_amount,
+		ofi.order_form_id AS ofi_order_form_id,
+		ofi.weight AS ofi_weight,
+		ofi.taste AS ofi_taste,
+		ofi.practice AS ofi_practice
+		FROM
+		( SELECT * FROM order_form WHERE id = #{id} ) AS of
+		LEFT JOIN order_form_info AS ofi ON ofi.order_form_id = of.id
+
+	</select>
+
+	<update id="update">
+
+		UPDATE order_form
+		<set>
+			<if test="status!=null">`status` = #{status},</if>
+			update_time = CURRENT_TIMESTAMP ()
+		</set>
+		WHERE id = #{id}
+ 
+	</update>
+	
+	<select id="selectMaxSize" resultType="Integer">
+	
+		SELECT COUNT(id) FROM order_form 
+		WHERE 1 = 1
+		<if test="isForUser==true">
+			AND user_wei_xin_id = #{userWeiXinId}
+		</if>
+		<if test="id!=null and id!=''">
+			AND id = #{id}
+		</if>
+	
+	</select>
+	<!-- add by qinyanyu 根据订单id删除 -->
+	<delete id="deleteOrderFormByNo">
+		DELETE FROM order_form WHERE order_no = #{orderNo} 
+	</delete>
+	<!-- end by qinyanyu 根据订单id删除 -->
+</mapper>

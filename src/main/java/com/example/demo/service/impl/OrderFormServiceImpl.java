@@ -1,5 +1,6 @@
 package com.example.demo.service.impl;
 
+import java.text.SimpleDateFormat;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.List;
@@ -71,7 +72,7 @@ public class OrderFormServiceImpl implements OrderFormService {
 	public ResultMap create(OrderFormPo orderFormPo,String orderNos) {
 
 		//判断订单是否存在，是则删除已存在订单并生成新的订单
-		checkOrder(orderNos);
+		//checkOrder(orderNos);
 		
 		// TODO Auto-generated method stub
 		// 校验商品信息
@@ -386,17 +387,17 @@ public class OrderFormServiceImpl implements OrderFormService {
 		List<OrderFormInfo> list = data.getOrderFormInfoList();
 		
 		logger.info("订单信息:{}" + Util.toJson(data));
-		i.put("订单号:", data.getOrderNo());
-		i.put("座位号:", data.getSeat());
+		i.put("订单号", data.getOrderNo());
+		i.put("座位号", data.getSeat());
 		for (OrderFormInfo orderFormInfo : list) {
-			String orderInfo = "	x "+ orderFormInfo.getAmount() +"	"+orderFormInfo.getPrice();
+			String orderInfo = "	x "+ orderFormInfo.getAmount() +"		"+orderFormInfo.getPrice();
 			i.put(orderFormInfo.getName(), orderInfo);
 		}
-		i.put("订单总价:", data.getPriceTotal().toString());
-		i.put("订单状态:", data.getSeat());
-		i.put("支付方式:", data.getCostWay());
-		i.put("备注:", data.getRemarks());
-		i.put("下单时间:", data.getCreateTime().toString());
+		i.put("订单总价", data.getPriceTotal().toString());
+		i.put("订单状态", data.getStatus() == 1 ?"已支付":"未支付");
+		i.put("支付方式", data.getCostWay() != null?data.getCostWay():"");
+		i.put("备注", data.getRemarks() != null ? data.getRemarks():"");
+		i.put("下单时间", new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(data.getCreateTime()));
 		i.put("printerName", printerName);//这里设置打印机的名字。
 		sendOrderInfo.send(i);
 	}

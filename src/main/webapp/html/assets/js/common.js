@@ -1,6 +1,6 @@
-//var baseUrl = "http://118.24.52.233";
- var baseUrl = "http://localhost:8080";
+var baseUrl = "https://www.hopfun.com.cn";
 
+// var baseUrl = "http://localhost:8080";
 function getQueryVariable(variable) {
     var query = window.location.search.substring(1);
     var vars = query.split("&");

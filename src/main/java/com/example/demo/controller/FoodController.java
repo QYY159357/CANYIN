@@ -77,7 +77,7 @@ public class FoodController {
 	@RequestMapping(value = { "/create" }, method = { RequestMethod.POST })
 	public ResultMap create(
 
-			@Size(min = 2, max = 8, message = "菜品名长度在{min}-{max}字以内") 
+			@Size(min = 2, max = 15, message = "菜品名长度在{min}-{max}字以内") 
 			@RequestParam(required = true) String name,
 
 			@RequestParam(required = true) String image,

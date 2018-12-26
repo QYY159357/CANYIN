@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.demo.mapper.FoodMapper">
+
+	<select id="selectAll" resultType="com.example.demo.pojo.vo.Food">
+
+		SELECT
+		id ,
+		create_time ,
+		update_time ,
+		image ,
+		`name` ,
+		price ,
+		info ,
+		`order`,
+		weight_list,
+		taste_list,
+		practice_list,
+		discount
+		FROM
+		food
+		ORDER BY `order` ASC,
+		create_time ASC
+
+	</select>
+
+	<select id="selectOneById" resultType="com.example.demo.pojo.vo.Food">
+
+		SELECT
+		*
+		FROM
+		food
+		WHERE id = #{id}
+
+	</select>
+
+	<select id="selectAllForSys" resultType="com.example.demo.pojo.vo.Food">
+
+		SELECT
+		id ,
+		create_time ,
+		update_time ,
+		image ,
+		`name` ,
+		price ,
+		info ,
+		`order`,
+		weight_list,
+		taste_list,
+		practice_list,
+		ishide,
+		sales_Mode,
+		discount
+		FROM food
+		WHERE 1=1
+		<if test="classify !='' and classify!=null">AND menu_classify_id = #{classify}</if>
+		<if test="foodName !='' and foodName!=null">AND name like "%"#{foodName}"%"</if>
+		ORDER BY `order` ASC,
+		create_time DESC
+		LIMIT #{currentPage}, #{pageSize}
+
+	</select>
+
+	<insert id="create">
+
+		INSERT INTO food (
+		id,
+		create_time,
+		update_time,
+		image,
+		`name`,
+		price,
+		info,
+		menu_classify_id,
+		`order`,
+		stock,
+		weight_list,
+		taste_list,
+		practice_list,
+		ishide
+		)
+		VALUES
+		(
+		#{id},
+		CURRENT_TIMESTAMP	(),
+		CURRENT_TIMESTAMP (),
+		#{image},
+		#{name},
+		#{price},
+		#{info},
+		#{menuClassifyId},
+		#{order},
+		#{stock},
+		#{weightList},
+		#{tasteList},
+		#{practiceList},
+		#{ishide}
+		)
+		ON DUPLICATE KEY UPDATE update_time =
+		CURRENT_TIMESTAMP ()
+
+	</insert>
+
+	<update id="update">
+
+		UPDATE food
+		<set>
+			<if test="name!=null">`name` = #{name},</if>
+			<if test="image!=null">image = #{image},</if>
+			<if test="price!=null">price = #{price},</if>
+			<if test="info!=null">info = #{info},</if>
+			<if test="menuClassifyId!=null">menu_classify_id = #{menuClassifyId},</if>
+			<if test="order!=null">`order` = #{order},</if>
+			<if test="stock!=null">stock = #{stock},</if>
+			<if test="weightList!=null">weight_list = #{weightList},</if>
+			<if test="tasteList!=null">taste_list = #{tasteList},</if>
+			<if test="practiceList!=null">practice_list = #{practiceList},</if>
+			update_time = CURRENT_TIMESTAMP ()
+		</set>
+		WHERE id = #{id}
+
+	</update>
+
+	<delete id="delete">
+
+		DELETE FROM food WHERE id = #{id}
+		
+	</delete>
+
+	<select id="selectById" resultType="com.example.demo.pojo.vo.Food">
+
+		SELECT
+		id ,
+		create_time ,
+		update_time ,
+		image ,
+		`name` ,
+		price ,
+		info ,
+		`order`,
+		weight_list,
+		taste_list,
+		practice_list,
+		discount
+		FROM
+		food
+		WHERE
+		id = #{id}
+
+	</select>
+
+	<select id="selectMaxSize" resultType="Integer">
+	
+		SELECT COUNT(id) FROM food where 1=1 
+		<if test="classify !='' and classify!=null">AND menu_classify_id = #{classify}</if>
+		<if test="foodName !='' and foodName!=null">AND name = #{foodName}</if>
+	</select>
+	
+	<update id="isHideFood">
+		UPDATE food SET ishide = #{ishide} WHERE id = #{id}
+	</update>
+	
+	<update id="updateFoodPrice">
+		UPDATE food SET discount = #{discount} WHERE 1=1
+	</update>
+	
+	<select id="queryFoodPrice" resultType="Float">
+		 select discount from food limit 1  
+	</select>
+	
+</mapper>
