@@ -90,9 +90,10 @@
                                             审核</button>
                                         <button type="button" class="am-btn am-btn-default am-btn-danger"><span class="am-icon-trash-o"></span>
                                             删除</button> -->
-                                              <button v-if="foodList[0].discount == 1"  @click="discount(foodList[0].discount)" type="button" class="am-btn am-btn-default am-btn-warning"><span class="am-icon-archive"></span>
+                                              
+                                              <button v-if="foodList[0].discount == 1"  @click="discountPre(foodList[0].discount)" type="button" class="am-btn am-btn-default am-btn-warning"><span class="am-icon-archive"></span>
                                             开启全场8.0折</button>
-                                              <button v-if="foodList[0].discount  != 1"  @click="discount(foodList[0].discount)" type="button" class="am-btn am-btn-default am-btn-warning"><span class="am-icon-archive"></span>
+                                              <button v-if="foodList[0].discount  != 1"  @click="discountPre(foodList[0].discount)" type="button" class="am-btn am-btn-default am-btn-warning"><span class="am-icon-archive"></span>
                                             关闭全场8.0折</button>
                                 </div>
                             </div>
@@ -235,6 +236,7 @@
                 foodList: [],//菜品集合
                 limitPage: {},
                 foodName:'',
+                classify:'0',
                 query: {
                     menuClassifyId: null
                 }
@@ -250,20 +252,21 @@
                     deleteOneById(id);
                 },
                 getFoodList: function (currentPage) {
-                    getFoodList(currentPage,"","");
+                	var c = vue.classify;
+                	console.log("获取分类:"+ c);
+                    getFoodList(currentPage,c,"");
                 },
                 showOrHide: function(id,ishide){
                 	showOrHide(id,ishide);
                 },
                 changeClassify: function(value){
-                	
                 	changeClassify(value);
                 },
                 queryFoods :function(){
                 	queryFoods();
                 },
-                discount: function(price){
-                	 discount(price);
+                discountPre: function(price){
+                	discountPre(price);
                 },
                 checkNum:function(num){
                 	return num.toFixed(2); 
@@ -273,6 +276,8 @@
             },
             watch:{
             	'selectValue':function(val,oldval){
+                	vue.classify = val;
+                	console.log("设置分类:"+ vue.classify);
             		changeClassify(val);
             	}
             }
@@ -421,7 +426,7 @@
         	getFoodList(1,classify,foodname);
         		
         }
-        function discount(disPrice){
+        function discountPre(disPrice){
         	if(disPrice < 1){
         		disPrice = "1.0";
         	}else{

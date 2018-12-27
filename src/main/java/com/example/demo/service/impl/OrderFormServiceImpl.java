@@ -1,5 +1,6 @@
 package com.example.demo.service.impl;
 
+import java.awt.Font;
 import java.text.SimpleDateFormat;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
@@ -387,19 +388,23 @@ public class OrderFormServiceImpl implements OrderFormService {
 		List<OrderFormInfo> list = data.getOrderFormInfoList();
 		
 		logger.info("订单信息:{}" + Util.toJson(data));
-		i.put("订单号", data.getOrderNo());
-		i.put("座位号", data.getSeat());
+//		i.put("订单号", data.getOrderNo());
+		Font f = new Font("宋体",Font.BOLD,11);
 		for (OrderFormInfo orderFormInfo : list) {
-			String orderInfo = "	x "+ orderFormInfo.getAmount() +"		"+orderFormInfo.getPrice();
-			i.put(orderFormInfo.getName(), orderInfo);
+			i = new LinkedHashMap<String, String>();
+			i.put("座位号", data.getSeat());
+			String orderInfo = "	x "+ orderFormInfo.getAmount() +"      ￥"+orderFormInfo.getPrice();
+			f = new Font(orderInfo,Font.BOLD,20);
+			i.put(orderFormInfo.getName(), f.getName());
+			sendOrderInfo.send(i);
 		}
-		i.put("订单总价", data.getPriceTotal().toString());
-		i.put("订单状态", data.getStatus() == 1 ?"已支付":"未支付");
-		i.put("支付方式", data.getCostWay() != null?data.getCostWay():"");
-		i.put("备注", data.getRemarks() != null ? data.getRemarks():"");
-		i.put("下单时间", new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(data.getCreateTime()));
-		i.put("printerName", printerName);//这里设置打印机的名字。
-		sendOrderInfo.send(i);
+//		i.put("订单总价", data.getPriceTotal().toString());
+//		i.put("订单状态", data.getStatus() == 1 ?"已支付":"未支付");
+//		i.put("支付方式", data.getCostWay() != null?data.getCostWay():"");
+//		i.put("备注", data.getRemarks() != null ? data.getRemarks():"");
+//		i.put("下单时间", new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(data.getCreateTime()));
+//		i.put("printerName", printerName);//这里设置打印机的名字。
+//		sendOrderInfo.send(i);
 	}
 
 }
